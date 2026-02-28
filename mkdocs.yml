@@ -64,7 +64,7 @@ theme:
       icon: material/weather-night
       name: Switch to light mode
 extra:
-  qt_version: 0.5.13
+  qt_version: 0.5.16
   android_version: v1.2.2
   macos_version: 1.23
   copyright_year: 2026

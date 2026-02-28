@@ -61,6 +61,7 @@ keywords: "KeyMod, HIDエミュレーター, スマホキーボード, Bluetooth
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">

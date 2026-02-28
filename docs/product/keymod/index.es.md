@@ -61,6 +61,7 @@ Un emulador HID (teclado y ratón) compacto y programable **USB + Bluetooth**, K
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">

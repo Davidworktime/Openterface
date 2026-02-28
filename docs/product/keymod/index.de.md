@@ -61,6 +61,7 @@ Ein kompakter, programmierbarer **USB + Bluetooth** HID-Emulator (Tastatur und M
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">

@@ -61,6 +61,7 @@ Un emulator HID (tastatură și mouse) compact și programabil **USB + Bluetooth
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">

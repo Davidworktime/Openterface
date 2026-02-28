@@ -61,6 +61,7 @@ Un emulatore HID (tastiera e mouse) compatto e programmabile **USB + Bluetooth**
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">

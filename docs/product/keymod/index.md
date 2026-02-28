@@ -61,6 +61,7 @@ A compact, programmable **USB + Bluetooth** HID (keyboard and mouse) emulator, K
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">

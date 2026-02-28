@@ -61,6 +61,7 @@ Un émulateur HID (clavier et souris) compact et programmable **USB + Bluetooth*
 
 </div>
 
+{% set product_signup_anchor = false %}
 {% include "partials/product-signup.html" %}
 
 <div markdown="0">
