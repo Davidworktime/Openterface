@@ -17,23 +17,18 @@ function initializeForm() {
   form.addEventListener('submit', handleSubmit);
 }
 
-// Function to initialize product-specific signup forms
+// Function to initialize product-specific signup forms (supports multiple forms per page)
 function initializeProductSignupForm() {
-  const form = document.getElementById('product-signup-form');
-  if (!form) return; // Return if form doesn't exist
+  const forms = document.querySelectorAll('form.product-signup-form');
+  forms.forEach(function(form) {
+    const submitButton = form.querySelector('input[type="submit"]');
+    if (!submitButton) return;
 
-  const submitButton = document.getElementById('product-form-submit');
-  const originalButtonText = submitButton.value;
-
-  // Enable the form and remove loading class
-  form.classList.remove('js-loading');
-  submitButton.disabled = false;
-
-  // Remove existing event listener if any
-  form.removeEventListener('submit', handleProductSubmit);
-
-  // Add new event listener
-  form.addEventListener('submit', handleProductSubmit);
+    form.classList.remove('js-loading');
+    submitButton.disabled = false;
+    form.removeEventListener('submit', handleProductSubmit);
+    form.addEventListener('submit', handleProductSubmit);
+  });
 }
 
 function handleSubmit(event) {
@@ -124,8 +119,9 @@ function handleSubmit(event) {
 function handleProductSubmit(event) {
   event.preventDefault();
 
-  const form = document.getElementById('product-signup-form');
-  const submitButton = document.getElementById('product-form-submit');
+  const form = event.currentTarget;
+  const submitButton = form.querySelector('input[type="submit"]');
+  if (!submitButton) return;
   const originalButtonText = submitButton.value;
 
   // Get form data
