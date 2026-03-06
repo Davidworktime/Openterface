@@ -4,6 +4,7 @@
 
 ## Mises à jour produit
 
+- 2026-03-05: [Journal technique : traquer la chaleur DP/VGA sur KVM-GO (et la solution qui a finalement fonctionné)](20260305-kvm-go-dp-vga-thermal-fix.fr.md)
 - 2026-02-03: [microSD EXPRESS sur KVM-GO : test de compatibilité et vitesses de transfert réelles](20260203-kvm-go-microsd-express.fr.md)
 - 2025-11-27: [Pourquoi le format physique de KVM-GO ressemble à ce qu'il est](20251127-why-kvm-go.fr.md)
 - 2025-10-07: [🚀 Lot Beta KVM-Go HDMI en cours d'expédition !](251007-kvm-go-beta-test-kits-sent-1.fr.md)
