@@ -4,6 +4,7 @@
 
 ## 제품 업데이트
 
+- 2026-03-05: [엔지니어링 로그: KVM-GO DP/VGA 열 추적 및 최종 해결](20260305-kvm-go-dp-vga-thermal-fix.ko.md)
 - 2026-02-03: [KVM-GO의 microSD EXPRESS: 호환성 테스트 및 실제 전송 속도](20260203-kvm-go-microsd-express.ko.md)
 - 2026-01-23: [KVM-GO 생산 진행 상황 #1](20260123-kvmgo_update_20260115.ko.md)
 - 2025-12-24: [새로운 데모 영상, 소프트웨어 진행 상황 및 KVM-GO 내부 구성](20251224-kvm-go-demo-software-hardware.ko.md)

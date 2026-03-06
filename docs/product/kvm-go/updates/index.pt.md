@@ -4,6 +4,7 @@
 
 ## Atualizações de produto
 
+- 2026-03-05: [Registro de engenharia: Rastreando o calor DP/VGA no KVM-GO (e a correção que finalmente funcionou)](20260305-kvm-go-dp-vga-thermal-fix.pt.md)
 - 2026-02-03: [microSD EXPRESS no KVM-GO: teste de compatibilidade e velocidades de transferência reais](20260203-kvm-go-microsd-express.pt.md)
 
 ## Atualizações de Produto

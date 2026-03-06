@@ -4,6 +4,7 @@
 
 ## Produkt-Updates
 
+- 2026-03-05: [Engineering Log: DP/VGA-Hitze bei KVM-GO aufspüren (und die Lösung, die endlich funktionierte)](20260305-kvm-go-dp-vga-thermal-fix.de.md)
 - 2026-02-03: [microSD EXPRESS auf KVM-GO: Kompatibilitätstest und reale Übertragungsgeschwindigkeiten](20260203-kvm-go-microsd-express.de.md)
 - 2026-01-23: [Produktionsfortschritt von KVM-GO #1](20260123-kvmgo_update_20260115.de.md)
 - 2025-12-24: [Neues Demo-Video, Software-Fortschritte und was sich in KVM-GO befindet](20251224-kvm-go-demo-software-hardware.de.md)
