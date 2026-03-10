@@ -106,8 +106,8 @@ Hardware e software [completamente open-source](/compliance) para transparência
 
 ## Downloads de Documentação
 
-- **[Guia de Início Rápido](https://raw.githubusercontent.com/TechxArtisanStudio/Openterface/main/product-printed-materials/minikvm_quick_start_guide_20240928.pdf)** (PDF)
-- **[Folha de Dados (Inglês)](https://raw.githubusercontent.com/TechxArtisanStudio/Openterface/main/product-printed-materials/Openterface-Mini-KVM-Basic-and-Toolkit-Datasheet-Eng-20250313.pdf)** (PDF)
+- **[Guia de Início Rápido](https://assets.openterface.com/minikvm/minikvm_quick_start_guide.pdf)** (PDF)
+- **[Folha de Dados (Inglês)](https://assets.openterface.com/minikvm/Openterface-Mini-KVM-Basic-and-Toolkit-Datasheet-Eng.pdf)** (PDF)
 
 ![lig-front](https://assets.openterface.com/images/product/minikvm-v1-9-front.svg#only-light){:style="max-height:260px"}
 ![lig-back](https://assets.openterface.com/images/product/minikvm-v1-9-back.svg#only-light){:style="max-height:260px"}

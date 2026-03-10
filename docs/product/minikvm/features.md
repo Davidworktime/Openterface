@@ -92,8 +92,8 @@ HDMI embedded audio passthrough for complete multimedia experience.
 - **Toolkit**: OP-MINIKVM-TOOLKIT
 
 ## Docs Downloads
-- **[Quick Start Guide](https://raw.githubusercontent.com/TechxArtisanStudio/Openterface/main/product-printed-materials/minikvm_quick_start_guide_20240928.pdf)** (PDF)
-- **[Datasheet (English)](https://raw.githubusercontent.com/TechxArtisanStudio/Openterface/main/product-printed-materials/Openterface-Mini-KVM-Basic-and-Toolkit-Datasheet-Eng-20250313.pdf)** (PDF)
+- **[Quick Start Guide](https://assets.openterface.com/minikvm/minikvm_quick_start_guide.pdf)** (PDF)
+- **[Datasheet (English)](https://assets.openterface.com/minikvm/Openterface-Mini-KVM-Basic-and-Toolkit-Datasheet-Eng.pdf)** (PDF)
 
 ![lig-front](https://assets.openterface.com/images/product/minikvm-v1-9-front.svg#only-light){:style="max-height:260px"}
 ![lig-back](https://assets.openterface.com/images/product/minikvm-v1-9-back.svg#only-light){:style="max-height:260px"}

@@ -106,8 +106,8 @@ HDMI-eingebetteter Audio-Durchgang für vollständige Multimedia-Erfahrung.
 
 ## Dokumentation Downloads
 
-- **[Schnellstart-Anleitung](https://raw.githubusercontent.com/TechxArtisanStudio/Openterface/main/product-printed-materials/minikvm_quick_start_guide_20240928.pdf)** (PDF)
-- **[Datenblatt (Englisch)](https://raw.githubusercontent.com/TechxArtisanStudio/Openterface/main/product-printed-materials/Openterface-Mini-KVM-Basic-and-Toolkit-Datasheet-Eng-20250313.pdf)** (PDF)
+- **[Schnellstart-Anleitung](https://assets.openterface.com/minikvm/minikvm_quick_start_guide.pdf)** (PDF)
+- **[Datenblatt (Englisch)](https://assets.openterface.com/minikvm/Openterface-Mini-KVM-Basic-and-Toolkit-Datasheet-Eng.pdf)** (PDF)
 
 ![lig-front](https://assets.openterface.com/images/product/minikvm-v1-9-front.svg#only-light){:style="max-height:260px"}
 ![lig-back](https://assets.openterface.com/images/product/minikvm-v1-9-back.svg#only-light){:style="max-height:260px"}
