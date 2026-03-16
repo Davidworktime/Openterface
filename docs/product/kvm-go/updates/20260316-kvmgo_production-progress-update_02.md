@@ -1,3 +1,19 @@
+---
+draft: false
+date: 2026-03-16
+title: "KVM-GO Production Progress Update #2 – Design Locked, Batch Staging, Manufacturing On Track"
+description: "Second KVM-GO production update: industrial design finalized (connector cap anti-loss tether), parts in batch staging, back cover complete, nylon front cover and orange connector cap in production. CE/RoHS/FCC/OSHWA prep and QC flow progressing."
+keywords: "KVM-GO production update, KVM-GO manufacturing, KVM-GO connector cap tether, KVM-GO batch production, KVM-GO enclosure production, KVM-GO back cover, KVM-GO nylon front cover, KVM-GO connector cap, KVM-over-USB production, Openterface KVM-GO, TechxArtisan KVM-GO, KVM-GO CE RoHS FCC OSHWA, KVM-GO assembly QC"
+author: "Openterface Team | TechxArtisan"
+category: "Product Updates"
+tags: ["KVM-GO", "Product Updates", "Production", "Manufacturing", "Hardware", "Assembly", "Industrial Design", "Compliance"]
+featured: false
+social:
+  image: "https://assets2.openterface.com/images/New-Version.webp"
+  title: "KVM-GO Production Progress #2 – Design Locked, Batches Staged"
+  description: "Design details locked in, connector cap tether finalized, parts in production and batch staging. Back cover done, front cover and connector caps in progress."
+---
+
 # KVM-GO Production Progress Update #2  
 ## Design Details Locked In, Batch Staging in Place, and Production Moving Forward
 
