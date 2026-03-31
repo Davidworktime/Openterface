@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Guia completo de configuração de software para Openterface KVM Extension for uConsole. Aprenda como instalar e configurar o App Openterface no seu uConsole para funcionalidade KVM perfeita.">
+        <meta name="description" content="Guia completo de configuração de software para a extensão KVM Openterface para uConsole.">
       
       
         <meta name="author" content="Openterface">
@@ -46,7 +46,7 @@
     
     
       
-        <title>Configuração de software - Openterface | Conectando interfaces para abrir possibilidades infinitas</title>
+        <title>Configuração de Software - Openterface | Conectando interfaces para abrir possibilidades infinitas</title>
       
     
     
@@ -399,16 +399,16 @@
 
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="Configuração de software - Openterface | Conectando interfaces para abrir possibilidades infinitas">
-<meta property="og:description" content="Guia completo de configuração de software para Openterface KVM Extension for uConsole. Aprenda como instalar e configurar o App Openterface no seu uConsole para funcionalidade KVM perfeita.">
+<meta property="og:title" content="Configuração de Software - Openterface | Conectando interfaces para abrir possibilidades infinitas">
+<meta property="og:description" content="Guia completo de configuração de software para a extensão KVM Openterface para uConsole.">
 <meta property="og:image" content="https://openterface.com/assets/images/social/pt/product/uconsole-kvm-extension/software-setup.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://openterface.com/pt/product/uconsole-kvm-extension/software-setup/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Configuração de software - Openterface | Conectando interfaces para abrir possibilidades infinitas">
-<meta property="twitter:description" content="Guia completo de configuração de software para Openterface KVM Extension for uConsole. Aprenda como instalar e configurar o App Openterface no seu uConsole para funcionalidade KVM perfeita.">
+<meta property="twitter:title" content="Configuração de Software - Openterface | Conectando interfaces para abrir possibilidades infinitas">
+<meta property="twitter:description" content="Guia completo de configuração de software para a extensão KVM Openterface para uConsole.">
 <meta property="twitter:image" content="https://openterface.com/assets/images/social/pt/product/uconsole-kvm-extension/software-setup.png">
 
   
@@ -429,7 +429,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuracao-de-software-openterface-kvm-extension-for-uconsole" class="md-skip">
+        <a href="#configuracao-de-software-extensao-kvm-openterface-para-uconsole" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -473,7 +473,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuração de software
+              Configuração de Software
             
           </span>
         </div>
@@ -2839,6 +2839,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lembretes-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lembretes importantes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#instrucoes-de-uso" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4337,8 +4348,102 @@
   
 
 
-<h1 id="configuracao-de-software-openterface-kvm-extension-for-uconsole"><strong>Configuração de software</strong> | Openterface KVM Extension for uConsole</h1>
+<h1 id="configuracao-de-software-extensao-kvm-openterface-para-uconsole"><strong>Configuração de Software</strong> | Extensão KVM Openterface para uConsole</h1>
 <h2 id="visao-geral-da-instalacao">Visão geral da instalação</h2>
+<p>O aplicativo Openterface permite que sua uConsole funcione como uma interface KVM, permitindo controlar dispositivos alvo através da tela, teclado e trackball integrados.</p>
+<div class="admonition note">
+<p class="admonition-title">Requisitos</p>
+<ul>
+<li><strong>uConsole</strong>: Requer o aplicativo Openterface instalado</li>
+<li><strong>Alvo</strong>: Nenhum app necessário — suporta Windows, macOS, Linux, Android, iOS</li>
+<li>
+<p><strong>Vídeo</strong>: Use um cabo HDMI padrão. Com um conversor HDMI alimentado, também suporta formatos como <strong>VGA</strong> e <strong>DP</strong>. <em>Dica: verifique se o conversor está devidamente alimentado; caso contrário, pode ocorrer tela preta.</em></p>
+</li>
+<li>
+<p><strong>Backend de vídeo recomendado</strong>: Para melhor desempenho e compatibilidade com GPUs arm64 (por exemplo, Raspberry Pi), use <strong>GStreamer</strong> como backend de vídeo. Note que <strong>Kali Linux</strong> pode não suportar bem o GStreamer.</p>
+</li>
+</ul>
+</div>
+<h2 id="metodos-de-instalacao">Métodos de instalação</h2>
+<h3 id="opcao-1-download-do-github-releases-recomendado-para-arm64"><strong>Opção 1: Download do GitHub Releases (Recomendado para arm64)</strong></h3>
+<p>Faça o download da versão mais recente do aplicativo Openterface para <strong>arm64</strong> diretamente em nossa <a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">página de Releases no GitHub</a>.</p>
+<ol>
+<li>Visite a página <a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">Openterface_QT Releases</a>.</li>
+<li>Baixe o pacote <code>.deb</code> mais recente para <strong>arm64</strong> (por exemplo, <code>openterfaceqt_*_arm64.deb</code>).</li>
+<li>Instale o pacote:
+   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./openterfaceqt_*_arm64.deb
+</span></code></pre></div>
+   <em>(Substitua o nome do arquivo, se for diferente.)</em></li>
+</ol>
+<hr>
+<h3 id="opcao-2-instalacao-via-flatpak"><strong>Opção 2: Instalação via Flatpak</strong></h3>
+<p>Siga nosso <a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Guia de Instalação Flatpak</a> para instruções detalhadas.</p>
+<hr>
+<h3 id="opcao-3-repositorio-da-comunidade"><strong>Opção 3: Repositório da comunidade</strong></h3>
+<p>Se preferir a build mantida pela comunidade (Rex):</p>
+<ol>
+<li>
+<p><strong>Adicionar repositório</strong>:
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Instalar pacote</strong>:
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+</span></code></pre></div><p></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Notas sobre o repositório</p>
+<p>Estes comandos requerem <code>sudo</code>. O repositório é voltado a pacotes arm64 Bookworm; verifique a compatibilidade com seu dispositivo antes de instalar.</p>
+</div>
+<h2 id="lembretes-importantes">Lembretes importantes</h2>
+<div class="admonition tip">
+<p class="admonition-title">Energia &amp; Primeira Inicialização</p>
+<ul>
+<li><strong>Certifique-se de que sua uConsole esteja suficientemente carregada ou conectada a uma fonte de energia estável.</strong> Baixa energia pode causar operação instável ou problemas de conexão.</li>
+<li><strong>Se não conseguir controlar o dispositivo alvo na primeira tentativa:</strong><ol>
+<li>Desligue completamente a uConsole.</li>
+<li>Aguarde pelo menos 10 segundos.</li>
+<li>Ligue novamente e tente de novo.</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Baudrate de comunicação serial</p>
+<ul>
+<li><strong>Configure o baudrate para 9600</strong> ao usar comunicação serial. Isso reduz a taxa de erro, pois a uConsole frequentemente não fornece energia suficiente para manter 115200 de forma confiável.</li>
+</ul>
+</div>
+<h2 id="instrucoes-de-uso">Instruções de uso</h2>
+<h3 id="iniciar-sessao-kvm"><strong>Iniciar sessão KVM</strong></h3>
+<ol>
+<li>Inicie o aplicativo Openterface na sua uConsole</li>
+<li>O aplicativo detectará automaticamente a placa de extensão KVM</li>
+<li>Conecte o dispositivo alvo via HDMI</li>
+<li>Use o teclado e o trackball integrados para controlar o dispositivo</li>
+</ol>
+<h3 id="recursos-de-controle"><strong>Recursos de controle</strong></h3>
+<ul>
+<li><strong>Teclado</strong>: Emulação completa de teclado incluindo teclas multimídia</li>
+<li><strong>Mouse</strong>: Posicionamento absoluto e relativo do mouse</li>
+<li><strong>Áudio</strong>: Passagem de áudio HDMI para os alto-falantes da uConsole</li>
+</ul>
+<h3 id="recursos-avancados"><strong>Recursos avançados</strong></h3>
+<ul>
+<li><strong>Transferência de texto</strong>: Transfira rapidamente texto simulando pressionamentos de tecla — ideal para nomes de usuário, senhas e trechos de código</li>
+<li><strong>USB comutável</strong>: Alterne o acesso USB entre a uConsole e o dispositivo alvo usando o app host</li>
+</ul>
+<hr>
+<p>title: "Configuração de software"
+description: "Guia completo de configuração de software para Openterface KVM Extension for uConsole. Aprenda como instalar e configurar o App Openterface no seu uConsole para funcionalidade KVM perfeita."
+keywords: "instalação app Openterface, configuração software uConsole, configuração app KVM, configuração app uConsole, guia instalação software"</p>
+<hr>
+<h1 id="configuracao-de-software-openterface-kvm-extension-for-uconsole"><strong>Configuração de software</strong> | Openterface KVM Extension for uConsole</h1>
+<h2 id="visao-geral-da-instalacao_1">Visão geral da instalação</h2>
 <p>O App Openterface permite que seu uConsole funcione como uma interface KVM, permitindo que você controle dispositivos alvo através da tela integrada, teclado e trackball.</p>
 <div class="admonition note">
 <p class="admonition-title">Requisitos</p>
@@ -4348,7 +4453,7 @@
 <li><strong>Vídeo</strong>: Use um cabo HDMI padrão. Use um cabo HDMI padrão. Com um conversor HDMI alimentado, também suporta outros formatos como <strong>VGA</strong>, <strong>DP</strong> e mais. <em>Dica: Certifique-se de que o conversor esteja adequadamente alimentado; caso contrário, você pode experimentar uma tela preta.</em></li>
 </ul>
 </div>
-<h2 id="metodos-de-instalacao">Métodos de instalação</h2>
+<h2 id="metodos-de-instalacao_1">Métodos de instalação</h2>
 <h3 id="opcao-1-instalacao-flatpak"><strong>Opção 1: Instalação Flatpak</strong></h3>
 <p>Siga nosso <a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Guia de instalação Flatpak</a> para etapas de configuração detalhadas.</p>
 <h3 id="opcao-2-repositorio-da-comunidade-recomendado"><strong>Opção 2: Repositório da comunidade (Recomendado)</strong></h3>
@@ -4356,14 +4461,14 @@
 <ol>
 <li>
 <p><strong>Adicionar repositório</strong>:
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
 </span></code></pre></div><p></p>
 </li>
 <li>
 <p><strong>Instalar pacote</strong>:
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
 </span></code></pre></div><p></p>
 </li>
 </ol>
@@ -4371,21 +4476,21 @@
 <p class="admonition-title">Notas do repositório</p>
 <p>Esses comandos requerem sudo. O repositório visa pacotes arm64 Bookworm; verifique a compatibilidade com seu dispositivo antes de instalar.</p>
 </div>
-<h2 id="instrucoes-de-uso">Instruções de uso</h2>
-<h3 id="iniciar-sessao-kvm"><strong>Iniciar sessão KVM</strong></h3>
+<h2 id="instrucoes-de-uso_1">Instruções de uso</h2>
+<h3 id="iniciar-sessao-kvm_1"><strong>Iniciar sessão KVM</strong></h3>
 <ol>
 <li>Lance o App Openterface no seu uConsole</li>
 <li>O app detectará automaticamente a placa Extension KVM</li>
 <li>Conecte seu dispositivo alvo via HDMI</li>
 <li>Use o teclado e trackball integrados do uConsole para controlar o dispositivo alvo</li>
 </ol>
-<h3 id="recursos-de-controle"><strong>Recursos de controle</strong></h3>
+<h3 id="recursos-de-controle_1"><strong>Recursos de controle</strong></h3>
 <ul>
 <li><strong>Teclado</strong>: Emulação completa do teclado incluindo teclas multimídia</li>
 <li><strong>Mouse</strong>: Posicionamento absoluto e relativo do mouse</li>
 <li><strong>Áudio</strong>: Pass-through de áudio HDMI para os alto-falantes do uConsole</li>
 </ul>
-<h3 id="recursos-avancados"><strong>Recursos avançados</strong></h3>
+<h3 id="recursos-avancados_1"><strong>Recursos avançados</strong></h3>
 <ul>
 <li><strong>Transferência de texto</strong>: Transfira rapidamente texto simulando pressionamentos de teclas—ideal para nomes de usuário, senhas e trechos de código</li>
 <li><strong>USB comutável</strong>: Mude facilmente o acesso USB entre uConsole e dispositivo alvo usando o app host</li>
@@ -4412,7 +4517,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="31 de março de 2026 03:32:30 UTC"><span class="timeago" datetime="2026-03-31T03:32:30+00:00" locale="pt"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="31 de março de 2026 03:32:30 UTC">2026-03-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="31 de março de 2026 04:04:03 UTC"><span class="timeago" datetime="2026-03-31T04:04:03+00:00" locale="pt"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="31 de março de 2026 04:04:03 UTC">2026-03-31</span>
   </span>
 
     

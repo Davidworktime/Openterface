@@ -2824,6 +2824,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#important-reminders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Reminders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4330,31 +4341,64 @@
 <ul>
 <li><strong>uConsole</strong>: Requires Openterface App installed</li>
 <li><strong>Target</strong>: No app needed - supports Windows, macOS, Linux, Android, iOS</li>
-<li><strong>Video</strong>: Use standard HDMI cable. Use a standard HDMI cable. With a powered HDMI converter, it also supports other formats such as <strong>VGA</strong>, <strong>DP</strong>, and more. <em>Tip: Ensure the converter is properly powered; otherwise, you may experience a black screen.</em></li>
+<li><strong>Video</strong>: Use standard HDMI cable. With a powered HDMI converter, it also supports other formats such as <strong>VGA</strong>, <strong>DP</strong>, and more. <em>Tip: Ensure the converter is properly powered; otherwise, you may experience a black screen.</em></li>
+<li><strong>Recommended Video Backend</strong>: For best performance and compatibility with arm64 GPUs (such as in the Raspberry Pi ecosystem), use <strong>GStreamer</strong> as the video backend. However, please note that <strong>Kali Linux</strong> may not support GStreamer well.</li>
 </ul>
 </div>
 <h2 id="installation-methods">Installation Methods</h2>
-<h3 id="option-1-flatpak-installation"><strong>Option 1: Flatpak Installation</strong></h3>
+<h3 id="option-1-download-from-github-releases-recommended-for-arm64"><strong>Option 1: Download from GitHub Releases (Recommended for arm64)</strong></h3>
+<p>Download the latest Openterface App release for <strong>arm64</strong> directly from our <a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">GitHub Releases page</a>.</p>
+<ol>
+<li>Visit the <a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">Openterface_QT Releases</a> page.</li>
+<li>Download the latest <code>.deb</code> package for <strong>arm64</strong> (e.g., <code>openterfaceqt_*_arm64.deb</code>).</li>
+<li>Install the package:
+    <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./openterfaceqt_*_arm64.deb
+</span></code></pre></div>
+    <em>(Replace the filename with the actual downloaded file name if different.)</em></li>
+</ol>
+<hr>
+<h3 id="option-2-flatpak-installation"><strong>Option 2: Flatpak Installation</strong></h3>
 <p>Follow our <a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Flatpak Installation Guide</a> for detailed setup steps.</p>
-<h3 id="option-2-community-repository-recommended"><strong>Option 2: Community Repository (Recommended)</strong></h3>
+<hr>
+<h3 id="option-3-community-repository"><strong>Option 3: Community Repository</strong></h3>
 <p>If you prefer the community build maintained by Rex:</p>
 <ol>
 <li>
 <p><strong>Add Repository</strong>:
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
 </span></code></pre></div><p></p>
 </li>
 <li>
 <p><strong>Install Package</strong>:
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
 </span></code></pre></div><p></p>
 </li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Repository Notes</p>
 <p>These commands require sudo. The repository targets arm64 Bookworm packages; verify compatibility with your device before installing.</p>
+</div>
+<h2 id="important-reminders">Important Reminders</h2>
+<div class="admonition tip">
+<p class="admonition-title">Power &amp; First-Time Setup</p>
+<ul>
+<li><strong>Ensure your uConsole is sufficiently charged or connected to a stable power source.</strong> Low power may cause unreliable operation or connection issues.</li>
+<li><strong>If you cannot control the target device on your first attempt:</strong><ol>
+<li>Fully shut down the uConsole.</li>
+<li>Wait at least 10 seconds.</li>
+<li>Power it on again and retry.
+This can help initialize the hardware and resolve first-time connection issues.</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Serial Communication Baudrate</p>
+<ul>
+<li><strong>Set the baudrate to 9600</strong> when using serial communication. This helps reduce error rates, as the uConsole often cannot deliver enough power to reliably maintain 115200 baudrate.</li>
+</ul>
 </div>
 <h2 id="usage-instructions">Usage Instructions</h2>
 <h3 id="starting-the-kvm-session"><strong>Starting the KVM Session</strong></h3>
@@ -4397,7 +4441,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="March 31, 2026 03:38:23 UTC"><span class="timeago" datetime="2026-03-31T03:38:23+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 31, 2026 03:38:23 UTC">2026-03-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="March 31, 2026 04:04:03 UTC"><span class="timeago" datetime="2026-03-31T04:04:03+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 31, 2026 04:04:03 UTC">2026-03-31</span>
   </span>
 
     

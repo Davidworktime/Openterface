@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ghid complet de configurare software pentru Openterface KVM Extension for uConsole. Învață cum să instalezi și să configurezi App-ul Openterface pe uConsole-ul tău pentru funcționalitate KVM fără probleme.">
+        <meta name="description" content="Ghid complet de configurare software pentru extensia KVM Openterface pentru uConsole.">
       
       
         <meta name="author" content="Openterface">
@@ -46,7 +46,7 @@
     
     
       
-        <title>Configurare software - Openterface | Conectând interfețele pentru a deschide posibilități infinite</title>
+        <title>Configurare Software - Openterface | Conectând interfețele pentru a deschide posibilități infinite</title>
       
     
     
@@ -401,16 +401,16 @@
 
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="Configurare software - Openterface | Conectând interfețele pentru a deschide posibilități infinite">
-<meta property="og:description" content="Ghid complet de configurare software pentru Openterface KVM Extension for uConsole. Învață cum să instalezi și să configurezi App-ul Openterface pe uConsole-ul tău pentru funcționalitate KVM fără probleme.">
+<meta property="og:title" content="Configurare Software - Openterface | Conectând interfețele pentru a deschide posibilități infinite">
+<meta property="og:description" content="Ghid complet de configurare software pentru extensia KVM Openterface pentru uConsole.">
 <meta property="og:image" content="https://openterface.com/assets/images/social/ro/product/uconsole-kvm-extension/software-setup.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://openterface.com/ro/product/uconsole-kvm-extension/software-setup/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Configurare software - Openterface | Conectând interfețele pentru a deschide posibilități infinite">
-<meta property="twitter:description" content="Ghid complet de configurare software pentru Openterface KVM Extension for uConsole. Învață cum să instalezi și să configurezi App-ul Openterface pe uConsole-ul tău pentru funcționalitate KVM fără probleme.">
+<meta property="twitter:title" content="Configurare Software - Openterface | Conectând interfețele pentru a deschide posibilități infinite">
+<meta property="twitter:description" content="Ghid complet de configurare software pentru extensia KVM Openterface pentru uConsole.">
 <meta property="twitter:image" content="https://openterface.com/assets/images/social/ro/product/uconsole-kvm-extension/software-setup.png">
 
   
@@ -431,7 +431,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configurare-software-openterface-kvm-extension-for-uconsole" class="md-skip">
+        <a href="#configurare-software-extensia-kvm-openterface-pentru-uconsole" class="md-skip">
           Sari la conținut
         </a>
       
@@ -475,7 +475,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configurare software
+              Configurare Software
             
           </span>
         </div>
@@ -2819,10 +2819,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#prezentare-generala-instalare" class="md-nav__link">
+  <a href="#prezentare-instalare" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prezentare generală instalare
+        Prezentare instalare
       
     </span>
   </a>
@@ -2834,6 +2834,17 @@
     <span class="md-ellipsis">
       
         Metode de instalare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mementouri-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mementouri importante
       
     </span>
   </a>
@@ -4339,6 +4350,100 @@
   
 
 
+<h1 id="configurare-software-extensia-kvm-openterface-pentru-uconsole"><strong>Configurare Software</strong> | Extensia KVM Openterface pentru uConsole</h1>
+<h2 id="prezentare-instalare">Prezentare instalare</h2>
+<p>Aplicația Openterface permite uConsole-ului să funcționeze ca interfață KVM, permițând controlul dispozitivelor țintă prin ecranul, tastatura și trackball-ul încorporate.</p>
+<div class="admonition note">
+<p class="admonition-title">Cerințe</p>
+<ul>
+<li><strong>uConsole</strong>: Necesită aplicația Openterface instalată</li>
+<li><strong>Țintă</strong>: Nu este necesară nicio aplicație — suportă Windows, macOS, Linux, Android, iOS</li>
+<li>
+<p><strong>Video</strong>: Folosiți un cablu HDMI standard. Cu un convertor HDMI alimentat, suportă și formate precum <strong>VGA</strong> și <strong>DP</strong>. <em>Sfat: Asigurați-vă că convertorul are alimentare adecvată; altfel, s-ar putea afișa ecran negru.</em></p>
+</li>
+<li>
+<p><strong>Backend video recomandat</strong>: Pentru performanță și compatibilitate optimă cu GPU-urile arm64 (ex. Raspberry Pi), folosiți <strong>GStreamer</strong> ca backend video. Rețineți că <strong>Kali Linux</strong> poate să nu suporte bine GStreamer.</p>
+</li>
+</ul>
+</div>
+<h2 id="metode-de-instalare">Metode de instalare</h2>
+<h3 id="optiunea-1-descarcare-de-pe-github-releases-recomandat-pentru-arm64"><strong>Opțiunea 1: Descărcare de pe GitHub Releases (Recomandat pentru arm64)</strong></h3>
+<p>Descărcați cea mai recentă versiune a aplicației Openterface pentru <strong>arm64</strong> direct de pe pagina noastră de <a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">GitHub Releases</a>.</p>
+<ol>
+<li>Vizitați pagina <a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">Openterface_QT Releases</a>.</li>
+<li>Descărcați pachetul <code>.deb</code> cel mai recent pentru <strong>arm64</strong> (ex. <code>openterfaceqt_*_arm64.deb</code>).</li>
+<li>Instalați pachetul:
+   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./openterfaceqt_*_arm64.deb
+</span></code></pre></div>
+   <em>(Înlocuiți numele fișierului după caz.)</em></li>
+</ol>
+<hr>
+<h3 id="optiunea-2-instalare-flatpak"><strong>Opțiunea 2: Instalare Flatpak</strong></h3>
+<p>Urmăriți <a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Ghidul de instalare Flatpak</a> pentru pași detaliați.</p>
+<hr>
+<h3 id="optiunea-3-repozitoriu-comunitar"><strong>Opțiunea 3: Repozitoriu comunitar</strong></h3>
+<p>Dacă preferați build-ul comunitar întreținut de Rex:</p>
+<ol>
+<li>
+<p><strong>Adăugați repozitoriul</strong>:
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Instalați pachetul</strong>:
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+</span></code></pre></div><p></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Notă despre repozitoriu</p>
+<p>Aceste comenzi necesită <code>sudo</code>. Repozitoriul vizează pachete arm64 Bookworm; verificați compatibilitatea cu dispozitivul dvs. înainte de instalare.</p>
+</div>
+<h2 id="mementouri-importante">Mementouri importante</h2>
+<div class="admonition tip">
+<p class="admonition-title">Alimentare &amp; prima pornire</p>
+<ul>
+<li><strong>Asigurați-vă că uConsole este suficient încărcată sau conectată la o sursă de alimentare stabilă.</strong> Alimentarea scăzută poate cauza comportament nefiabil sau probleme de conexiune.</li>
+<li><strong>Dacă nu puteți controla dispozitivul țintă la prima încercare:</strong><ol>
+<li>Opriți complet uConsole.</li>
+<li>Așteptați cel puțin 10 secunde.</li>
+<li>Porniți din nou și încercați din nou.</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Baudrate comunicare serială</p>
+<ul>
+<li><strong>Setați baudrate-ul la 9600</strong> când folosiți comunicare serială. Aceasta reduce rata de erori, deoarece uConsole adesea nu poate furniza suficientă putere pentru a menține 115200 în mod fiabil.</li>
+</ul>
+</div>
+<h2 id="instructiuni-de-utilizare">Instrucțiuni de utilizare</h2>
+<h3 id="pornire-sesiune-kvm"><strong>Pornire sesiune KVM</strong></h3>
+<ol>
+<li>Lansați aplicația Openterface pe uConsole</li>
+<li>Aplicația va detecta automat placa de extensie KVM</li>
+<li>Conectați dispozitivul țintă prin HDMI</li>
+<li>Folosiți tastatura și trackball-ul integrate pentru a controla dispozitivul</li>
+</ol>
+<h3 id="functii-de-control"><strong>Funcții de control</strong></h3>
+<ul>
+<li><strong>Tastatură</strong>: Emulare completă a tastaturii, inclusiv taste multimedia</li>
+<li><strong>Mouse</strong>: Poziționare absolută și relativă a mouse-ului</li>
+<li><strong>Audio</strong>: Passthrough audio HDMI către difuzoarele uConsole</li>
+</ul>
+<h3 id="functii-avansate"><strong>Funcții avansate</strong></h3>
+<ul>
+<li><strong>Transfer text</strong>: Trimiteți text rapid simulând apăsări de taste — ideal pentru nume de utilizator, parole și fragmente de cod</li>
+<li><strong>USB comutabil</strong>: Comutați ușor accesul USB între uConsole și dispozitivul țintă prin aplicația host</li>
+</ul>
+<hr>
+<p>title: "Configurare software"
+description: "Ghid complet de configurare software pentru Openterface KVM Extension for uConsole. Învață cum să instalezi și să configurezi App-ul Openterface pe uConsole-ul tău pentru funcționalitate KVM fără probleme."
+keywords: "instalare app Openterface, configurare software uConsole, configurare app KVM, configurare app uConsole, ghid instalare software"</p>
+<hr>
 <h1 id="configurare-software-openterface-kvm-extension-for-uconsole"><strong>Configurare software</strong> | Openterface KVM Extension for uConsole</h1>
 <h2 id="prezentare-generala-instalare">Prezentare generală instalare</h2>
 <p>App-ul Openterface permite uConsole-ului tău să funcționeze ca o interfață KVM, permițându-ți să controlezi dispozitivele țintă prin ecranul integrat, tastatura și trackball.</p>
@@ -4350,7 +4455,7 @@
 <li><strong>Video</strong>: Folosește un cablu HDMI standard. Folosește un cablu HDMI standard. Cu un convertor HDMI alimentat, suportă și alte formate precum <strong>VGA</strong>, <strong>DP</strong> și mai multe. <em>Sfat: Asigură-te că convertorul este alimentat corespunzător; altfel, poți experimenta un ecran negru.</em></li>
 </ul>
 </div>
-<h2 id="metode-de-instalare">Metode de instalare</h2>
+<h2 id="metode-de-instalare_1">Metode de instalare</h2>
 <h3 id="optiunea-1-instalare-flatpak"><strong>Opțiunea 1: Instalare Flatpak</strong></h3>
 <p>Urmărește <a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Ghidul nostru de instalare Flatpak</a> pentru pași de configurare detaliați.</p>
 <h3 id="optiunea-2-depozitarul-comunitatii-recomandat"><strong>Opțiunea 2: Depozitarul comunității (Recomandat)</strong></h3>
@@ -4358,14 +4463,14 @@
 <ol>
 <li>
 <p><strong>Adaugă depozitarul</strong>:
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
 </span></code></pre></div><p></p>
 </li>
 <li>
 <p><strong>Instalează pachetul</strong>:
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
 </span></code></pre></div><p></p>
 </li>
 </ol>
@@ -4373,7 +4478,7 @@
 <p class="admonition-title">Note depozitar</p>
 <p>Aceste comenzi necesită sudo. Depozitarul țintește pachete arm64 Bookworm; verifică compatibilitatea cu dispozitivul tău înainte de instalare.</p>
 </div>
-<h2 id="instructiuni-de-utilizare">Instrucțiuni de utilizare</h2>
+<h2 id="instructiuni-de-utilizare_1">Instrucțiuni de utilizare</h2>
 <h3 id="pornirea-sesiunii-kvm"><strong>Pornirea sesiunii KVM</strong></h3>
 <ol>
 <li>Lansează App-ul Openterface pe uConsole-ul tău</li>
@@ -4414,7 +4519,7 @@
     <span class="md-icon" title="Ultima actualizare">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="31 martie 2026 03:32:30 UTC"><span class="timeago" datetime="2026-03-31T03:32:30+00:00" locale="ro"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="31 martie 2026 03:32:30 UTC">2026-03-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="31 martie 2026 04:04:03 UTC"><span class="timeago" datetime="2026-03-31T04:04:03+00:00" locale="ro"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="31 martie 2026 04:04:03 UTC">2026-03-31</span>
   </span>
 
     

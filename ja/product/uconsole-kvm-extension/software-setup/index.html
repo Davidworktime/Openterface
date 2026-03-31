@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Openterface KVM Extension for uConsole の完全なソフトウェアセットアップガイド。シームレスな KVM 機能のために uConsole に Openterface App をインストールして設定する方法を学びます。">
+        <meta name="description" content="uConsole向けOpenterface KVM拡張のソフトウェアセットアップ完全ガイド。">
       
       
         <meta name="author" content="Openterface">
@@ -46,7 +46,7 @@
     
     
       
-        <title>ソフトウェアセットアップ - Openterface | インターフェースを橋渡し、無限の可能性を開く</title>
+        <title>ソフトウェアのセットアップ - Openterface | インターフェースを橋渡し、無限の可能性を開く</title>
       
     
     
@@ -387,16 +387,16 @@
 
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="ソフトウェアセットアップ - Openterface | インターフェースを橋渡し、無限の可能性を開く">
-<meta property="og:description" content="Openterface KVM Extension for uConsole の完全なソフトウェアセットアップガイド。シームレスな KVM 機能のために uConsole に Openterface App をインストールして設定する方法を学びます。">
+<meta property="og:title" content="ソフトウェアのセットアップ - Openterface | インターフェースを橋渡し、無限の可能性を開く">
+<meta property="og:description" content="uConsole向けOpenterface KVM拡張のソフトウェアセットアップ完全ガイド。">
 <meta property="og:image" content="https://openterface.com/assets/images/social/ja/product/uconsole-kvm-extension/software-setup.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://openterface.com/ja/product/uconsole-kvm-extension/software-setup/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="ソフトウェアセットアップ - Openterface | インターフェースを橋渡し、無限の可能性を開く">
-<meta property="twitter:description" content="Openterface KVM Extension for uConsole の完全なソフトウェアセットアップガイド。シームレスな KVM 機能のために uConsole に Openterface App をインストールして設定する方法を学びます。">
+<meta property="twitter:title" content="ソフトウェアのセットアップ - Openterface | インターフェースを橋渡し、無限の可能性を開く">
+<meta property="twitter:description" content="uConsole向けOpenterface KVM拡張のソフトウェアセットアップ完全ガイド。">
 <meta property="twitter:image" content="https://openterface.com/assets/images/social/ja/product/uconsole-kvm-extension/software-setup.png">
 
   
@@ -417,7 +417,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openterface-kvm-extension-for-uconsole" class="md-skip">
+        <a href="#openterface-kvm-for-uconsole" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -461,7 +461,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ソフトウェアセットアップ
+              ソフトウェアのセットアップ
             
           </span>
         </div>
@@ -2830,7 +2830,18 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用方法
+        重要な注意点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用手順
       
     </span>
   </a>
@@ -4325,8 +4336,102 @@
   
 
 
-<h1 id="openterface-kvm-extension-for-uconsole"><strong>ソフトウェアセットアップ</strong> | Openterface KVM Extension for uConsole</h1>
+<h1 id="openterface-kvm-for-uconsole"><strong>ソフトウェアのセットアップ</strong> | Openterface KVM拡張 for uConsole</h1>
 <h2 id="_1">インストール概要</h2>
+<p>Openterfaceアプリにより、uConsoleをKVMインターフェースとして使用でき、内蔵の画面・キーボード・トラックボールでターゲット機器を操作できます。</p>
+<div class="admonition note">
+<p class="admonition-title">要件</p>
+<ul>
+<li><strong>uConsole</strong>: Openterfaceアプリのインストールが必要</li>
+<li><strong>ターゲット</strong>: アプリ不要 — Windows, macOS, Linux, Android, iOS対応</li>
+<li>
+<p><strong>映像</strong>: 標準のHDMIケーブルを使用してください。電源付きのHDMIコンバータを使用すると、<strong>VGA</strong>や<strong>DP</strong>などの形式にも対応します。<em>ヒント: コンバータに十分な電力が供給されていることを確認してください。供給不足だと黒画面になる場合があります。</em></p>
+</li>
+<li>
+<p><strong>推奨ビデオバックエンド</strong>: arm64 GPU（例: Raspberry Pi）でのパフォーマンスと互換性を高めるため、ビデオバックエンドに<strong>GStreamer</strong>を推奨します。ただし、<strong>Kali Linux</strong>ではGStreamerのサポートが不十分な場合があります。</p>
+</li>
+</ul>
+</div>
+<h2 id="_2">インストール方法</h2>
+<h3 id="1-github-releasesarm64"><strong>オプション1: GitHub Releasesからダウンロード（arm64推奨）</strong></h3>
+<p>最新のOpenterfaceアプリ（<strong>arm64</strong>）を当プロジェクトの<a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">GitHub Releases</a>から直接ダウンロードしてください。</p>
+<ol>
+<li><a href="https://github.com/TechxArtisanStudio/Openterface_QT/releases">Openterface_QT Releases</a>ページにアクセスします。</li>
+<li><strong>arm64</strong>用の最新の<code>.deb</code>パッケージをダウンロードします（例: <code>openterfaceqt_*_arm64.deb</code>）。</li>
+<li>パッケージをインストールします:
+   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./openterfaceqt_*_arm64.deb
+</span></code></pre></div>
+   <em>(実際のファイル名に置き換えてください)</em></li>
+</ol>
+<hr>
+<h3 id="2-flatpak"><strong>オプション2: Flatpakでのインストール</strong></h3>
+<p>詳細は<a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Flatpakインストールガイド</a>を参照してください。</p>
+<hr>
+<h3 id="3"><strong>オプション3: コミュニティリポジトリ</strong></h3>
+<p>Rexがメンテナンスするコミュニティビルドを利用する場合：</p>
+<ol>
+<li>
+<p><strong>リポジトリを追加</strong>:
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>パッケージをインストール</strong>:
+    </p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+</span></code></pre></div><p></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">リポジトリについて</p>
+<p>これらのコマンドは<code>sudo</code>が必要です。リポジトリはarm64 Bookwormパッケージを対象としているため、導入前にデバイスの互換性を確認してください。</p>
+</div>
+<h2 id="_3">重要な注意点</h2>
+<div class="admonition tip">
+<p class="admonition-title">電源と初回セットアップ</p>
+<ul>
+<li><strong>uConsoleが十分に充電されているか、安定した電源に接続されていることを確認してください。</strong> 電力不足は不安定な動作や接続問題を引き起こす可能性があります。</li>
+<li><strong>初回にターゲットを制御できない場合:</strong><ol>
+<li>uConsoleを完全にシャットダウンします。</li>
+<li>少なくとも10秒待ちます。</li>
+<li>再度起動して試してください。</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">シリアル通信のボーレート</p>
+<ul>
+<li>シリアル通信では<strong>9600ボーレート</strong>を使用してください。uConsoleは115200を安定して維持するのに十分な電力を供給できないことが多く、エラー率が上がるためです。</li>
+</ul>
+</div>
+<h2 id="_4">使用手順</h2>
+<h3 id="kvm"><strong>KVMセッションの開始</strong></h3>
+<ol>
+<li>uConsoleでOpenterfaceアプリを起動します</li>
+<li>アプリがKVM拡張ボードを自動検出します</li>
+<li>HDMIでターゲット機器を接続します</li>
+<li>uConsole内蔵のキーボードとトラックボールでターゲットを操作します</li>
+</ol>
+<h3 id="_5"><strong>制御機能</strong></h3>
+<ul>
+<li><strong>キーボード</strong>: マルチメディアキーを含むフルキーボードエミュレーション</li>
+<li><strong>マウス</strong>: 絶対および相対位置指定</li>
+<li><strong>オーディオ</strong>: HDMIオーディオをuConsoleスピーカーにパススルー</li>
+</ul>
+<h3 id="_6"><strong>高度な機能</strong></h3>
+<ul>
+<li><strong>テキスト転送</strong>: キーストロークをエミュレートしてテキストを素早く送信—ユーザー名、パスワード、コード断片に最適</li>
+<li><strong>切替可能なUSB</strong>: ホストアプリでuConsoleとターゲット間のUSBアクセスを切り替え可能</li>
+</ul>
+<hr>
+<p>title: "ソフトウェアセットアップ"
+description: "Openterface KVM Extension for uConsole の完全なソフトウェアセットアップガイド。シームレスな KVM 機能のために uConsole に Openterface App をインストールして設定する方法を学びます。"
+keywords: "Openterfaceアプリインストール, uConsoleソフトウェアセットアップ, KVMアプリセットアップ, uConsoleアプリ設定, ソフトウェアインストールガイド"</p>
+<hr>
+<h1 id="openterface-kvm-extension-for-uconsole"><strong>ソフトウェアセットアップ</strong> | Openterface KVM Extension for uConsole</h1>
+<h2 id="_7">インストール概要</h2>
 <p>Openterface App により、uConsole が KVM インターフェースとして機能し、内蔵画面、キーボード、トラックボールを使用してターゲットデバイスを制御できます。</p>
 <div class="admonition note">
 <p class="admonition-title">要件</p>
@@ -4336,7 +4441,7 @@
 <li><strong>ビデオ</strong>：標準 HDMI ケーブルを使用してください。標準 HDMI ケーブルを使用してください。電源付き HDMI コンバーターを使用すると、<strong>VGA</strong>、<strong>DP</strong> などの他のフォーマットもサポートします。<em>ヒント：コンバーターが適切に電源供給されていることを確認してください。そうしないと、黒い画面が表示される可能性があります。</em></li>
 </ul>
 </div>
-<h2 id="_2">インストール方法</h2>
+<h2 id="_8">インストール方法</h2>
 <h3 id="1flatpak"><strong>オプション 1：Flatpak インストール</strong></h3>
 <p>詳細なセットアップ手順については、<a href="https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md">Flatpak インストールガイド</a> に従ってください。</p>
 <h3 id="2"><strong>オプション 2：コミュニティリポジトリ（推奨）</strong></h3>
@@ -4344,14 +4449,14 @@
 <ol>
 <li>
 <p><strong>リポジトリの追加</strong>：
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
+</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm/KEY.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/ak-rex.gpg
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>-y<span class="w"> </span><span class="s2">"deb [arch=arm64] https://raw.githubusercontent.com/ak-rex/ClockworkPi-apt/main/bookworm stable main"</span>
 </span></code></pre></div><p></p>
 </li>
 <li>
 <p><strong>パッケージのインストール</strong>：
-</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
+</p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openterfaceqt
 </span></code></pre></div><p></p>
 </li>
 </ol>
@@ -4359,21 +4464,21 @@
 <p class="admonition-title">リポジトリの注意事項</p>
 <p>これらのコマンドには sudo が必要です。リポジトリは arm64 Bookworm パッケージを対象としています。インストール前にデバイスとの互換性を確認してください。</p>
 </div>
-<h2 id="_3">使用方法</h2>
-<h3 id="kvm"><strong>KVM セッションの開始</strong></h3>
+<h2 id="_9">使用方法</h2>
+<h3 id="kvm_1"><strong>KVM セッションの開始</strong></h3>
 <ol>
 <li>uConsole で Openterface App を起動</li>
 <li>アプリは自動的に KVM Extension ボードを検出</li>
 <li>HDMI でターゲットデバイスを接続</li>
 <li>uConsole の内蔵キーボードとトラックボールを使用してターゲットデバイスを制御</li>
 </ol>
-<h3 id="_4"><strong>制御機能</strong></h3>
+<h3 id="_10"><strong>制御機能</strong></h3>
 <ul>
 <li><strong>キーボード</strong>：マルチメディアキーを含む完全なキーボードエミュレーション</li>
 <li><strong>マウス</strong>：絶対および相対マウス位置</li>
 <li><strong>オーディオ</strong>：HDMI オーディオを uConsole スピーカーにパススルー</li>
 </ul>
-<h3 id="_5"><strong>高度な機能</strong></h3>
+<h3 id="_11"><strong>高度な機能</strong></h3>
 <ul>
 <li><strong>テキスト転送</strong>：キーストロークをシミュレートしてテキストを迅速に転送—ユーザー名、パスワード、コードスニペットに最適</li>
 <li><strong>切り替え可能 USB</strong>：ホストアプリを使用して uConsole とターゲットデバイス間で USB アクセスを簡単に切り替え</li>
@@ -4400,7 +4505,7 @@
     <span class="md-icon" title="最終更新日">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月31日 03:32:30 UTC"><span class="timeago" datetime="2026-03-31T03:32:30+00:00" locale="ja"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月31日 03:32:30 UTC">2026-03-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月31日 04:04:03 UTC"><span class="timeago" datetime="2026-03-31T04:04:03+00:00" locale="ja"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月31日 04:04:03 UTC">2026-03-31</span>
   </span>
 
     
