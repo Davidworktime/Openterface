@@ -19,7 +19,7 @@ App-ul Openterface permite uConsole-ului tău să funcționeze ca o interfață 
 
 ### **Opțiunea 1: Instalare Flatpak**
 
-Urmărește [Ghidul nostru de instalare Flatpak](https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/doc/flatpak_installation.md) pentru pași de configurare detaliați.
+Urmărește [Ghidul nostru de instalare Flatpak](https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md) pentru pași de configurare detaliați.
 
 ### **Opțiunea 2: Depozitarul comunității (Recomandat)**
 

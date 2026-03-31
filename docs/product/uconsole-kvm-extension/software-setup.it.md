@@ -19,7 +19,7 @@ L'App Openterface consente al tuo uConsole di funzionare come un'interfaccia KVM
 
 ### **Opzione 1: Installazione Flatpak**
 
-Segui la nostra [Guida all'installazione Flatpak](https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/doc/flatpak_installation.md) per i passaggi di configurazione dettagliati.
+Segui la nostra [Guida all'installazione Flatpak](https://github.com/TechxArtisanStudio/Openterface_QT/blob/main/docs/flatpak_installation.md) per i passaggi di configurazione dettagliati.
 
 ### **Opzione 2: Repository della comunità (Raccomandato)**
 
