@@ -168,6 +168,11 @@
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Space between signup block and embedded YouTube grid on /product/<name>/ pages */
+.product-signup-container + div .youtube-videos-grid {
+    margin-top: 1.75rem;
+}
+
 .product-signup-container p {
     color: var(--md-default-fg-color--light);
     font-size: 0.8rem;
@@ -280,6 +285,10 @@
 
 /* Responsive design for product signup */
 @media screen and (max-width: 76.1875em) {
+    .product-signup-container + div .youtube-videos-grid {
+        margin-top: 1.5rem;
+    }
+
     .product-signup-container {
         padding: 0.75rem;
         margin: 1rem 0;
@@ -297,6 +306,10 @@
 }
 
 @media screen and (max-width: 60em) {
+    .product-signup-container + div .youtube-videos-grid {
+        margin-top: 1.25rem;
+    }
+
     .product-signup-container {
         padding: 0.75rem;
         margin: 0.75rem 0;
@@ -322,6 +335,10 @@
 
 /* Extra small screens */
 @media screen and (max-width: 30em) {
+    .product-signup-container + div .youtube-videos-grid {
+        margin-top: 1rem;
+    }
+
     .product-signup-container {
         padding: 0.5rem;
     }

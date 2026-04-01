@@ -2,6 +2,12 @@
 
 **Total Updates: {{ config.extra['kvm-go_updates'] }}**
 
+## Product Updates
+
+- 2026-03-16: [KVM-GO Production Progress Update #2](20260316-kvmgo_production-progress-update_02.md)
+- 2025-11-14: [🚀 Excellente nouvelle : KVM-GO est maintenant disponible !](251114-kvm-go-launch-mini-kvm-update.fr.md)
+- 2025-08-30: [Rejoignez l'équipe de test bêta KVM-Go – Test gratuit, places limitées !](250830-kvm-go-pre-launch.fr.md)
+
 ## Mises à jour produit
 
 - 2026-03-05: [Journal technique : traquer la chaleur DP/VGA sur KVM-GO (et la solution qui a finalement fonctionné)](20260305-kvm-go-dp-vga-thermal-fix.fr.md)
@@ -17,9 +23,4 @@
 ## Mises à jour du produit
 
 - 2025-12-24: [Nouvelle vidéo de démo, progression logicielle et ce qui se trouve à l'intérieur du KVM-GO](20251224-kvm-go-demo-software-hardware.fr.md)
-
-## Product Updates
-
-- 2025-11-14: [🚀 Excellente nouvelle : KVM-GO est maintenant disponible !](251114-kvm-go-launch-mini-kvm-update.fr.md)
-- 2025-08-30: [Rejoignez l'équipe de test bêta KVM-Go – Test gratuit, places limitées !](250830-kvm-go-pre-launch.fr.md)
 

@@ -13,6 +13,17 @@ keywords: "KeyMod, HID 模拟器, 手机键盘, 蓝牙键盘, USB 键盘, 便携
   <div class="slogan-subtitle">面向技术、专业人士和游戏的可编程键盘和鼠标控制。</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    立即支持
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 继 2024 年 [Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm) 和 2025 年 [KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go) 活动成功后，我们带来了一款新的日常控制工具：**Openterface KeyMod**。

@@ -13,6 +13,17 @@ keywords: "KeyMod, HID emulator, phone keyboard, Bluetooth keyboard, USB keyboar
   <div class="slogan-subtitle">Programmable keyboard and mouse control for tech, professionals, and gaming.</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    Support NOW
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 Following the success of our 2024 [Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm) and 2025 [KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go) campaigns, we're back with a new kind of everyday control tool: **Openterface KeyMod Series**.

@@ -13,6 +13,17 @@ keywords: "KeyMod, emulator HID, tastatură telefon, tastatură Bluetooth, tasta
   <div class="slogan-subtitle">Control tastatură și mouse programabil pentru tech, profesioniști și gaming.</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    Susține ACUM
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 După succesul campaniilor noastre din 2024 [Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm) și 2025 [KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go), revenim cu un nou tip de instrument de control zilnic: **Openterface KeyMod**.

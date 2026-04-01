@@ -13,6 +13,17 @@ keywords: "KeyMod, emulatore HID, tastiera telefono, tastiera Bluetooth, tastier
   <div class="slogan-subtitle">Controllo tastiera e mouse programmabile per tech, professionisti e gaming.</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    Sostieni ORA
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 Dopo il successo delle nostre campagne 2024 [Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm) e 2025 [KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go), torniamo con un nuovo tipo di strumento di controllo quotidiano: **Openterface KeyMod**.

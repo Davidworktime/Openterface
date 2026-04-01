@@ -64,21 +64,22 @@ theme:
       icon: material/weather-night
       name: Switch to light mode
 extra:
-  qt_version: 0.5.17
+  qt_version: 0.5.20
   android_version: v1.2.2
-  macos_version: 1.23
+  macos_version: 1.24
   copyright_year: 2026
   app_updates: 2
   usb-kvm-diy-contest-2024_updates: 3
   exhibition_updates: 3
   uconsole-kvm-extension_updates: 2
   minikvm_updates: 16
-  kvm-go_updates: 9
+  kvm-go_updates: 10
   accessories_updates: 0
   keymod_updates: 0
   qt_linux_stable: 0.3.19
   minikvm_purchase_link: https://www.crowdsupply.com/techxartisan/openterface-mini-kvm
   kvmgo_purchase_link: https://www.crowdsupply.com/techxartisan/openterface-kvm-go
+  keymod_crowdsupply_link: https://www.crowdsupply.com/techxartisan/openterface-keymod
   social:
   - icon: txa/crowd-supply-icon
     link: https://www.crowdsupply.com/techxartisan/openterface-mini-kvm

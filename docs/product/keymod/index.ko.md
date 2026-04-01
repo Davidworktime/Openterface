@@ -13,6 +13,17 @@ keywords: "KeyMod, HID 에뮬레이터, 폰 키보드, 블루투스 키보드, U
   <div class="slogan-subtitle">기술, 전문가 및 게이밍을 위한 프로그래밍 가능한 키보드 및 마우스 제어.</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    지금 후원하기
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 2024년 [Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm)과 2025년 [KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go) 캠페인의 성공에 이어, 새로운 일상 제어 도구를 선보입니다: **Openterface KeyMod**.

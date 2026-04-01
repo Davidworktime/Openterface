@@ -13,6 +13,17 @@ keywords: "KeyMod, HIDエミュレーター, スマホキーボード, Bluetooth
   <div class="slogan-subtitle">テック、プロフェッショナル、ゲーミング向けのプログラマブルなキーボードとマウス制御。</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    今すぐ支援
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 2024年[Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm)と2025年[KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go)キャンペーンの成功に続き、新しい日常制御ツールを発表します：**Openterface KeyMod**。

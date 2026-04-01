@@ -13,6 +13,17 @@ keywords: "KeyMod, emulador HID, teclado teléfono, teclado Bluetooth, teclado U
   <div class="slogan-subtitle">Control de teclado y ratón programable para tecnología, profesionales y gaming.</div>
 </div>
 
+<div style="text-align: center; margin: 20px 0;">
+  <button class="md-button" onclick="window.open('{{ config.extra.keymod_crowdsupply_link }}', '_blank')">
+    Apoya AHORA
+    <img 
+      class="skip-lightbox"
+      src="https://assets.openterface.com/images/trademark/crowd-supply.svg" 
+      alt="Crowd Supply" 
+      style="vertical-align: middle; height: 26px; margin-left: 8px;">
+  </button>
+</div>
+
 {% include "partials/product-signup.html" %}
 
 Tras el éxito de nuestras campañas de 2024 [Mini-KVM](https://www.crowdsupply.com/techxartisan/openterface-mini-kvm) y 2025 [KVM-GO](https://www.crowdsupply.com/techxartisan/openterface-kvm-go), volvemos con una nueva herramienta de control cotidiano: **Openterface KeyMod**.
