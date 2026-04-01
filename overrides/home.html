@@ -48,8 +48,34 @@
       <!-- Main Carousel Content -->
       <div class="mdx-carousel" id="mdx-carousel" role="region" aria-label="Featured highlights carousel" data-autoplay="true" data-interval="6000">
         
-        <!-- Slide 1: KVM-GO Series -->
+        <!-- Slide 1: KeyMod Series -->
         <div class="carousel-slide carousel-slide--active" data-slide-index="1">
+          <div class="carousel-content-left">
+            <div class="carousel-category">KeyMod Series</div>
+            <h1 class="carousel-headline">Turn Your Phone into a Mini Keyboard</h1>
+            <p class="carousel-description">A compact USB + Bluetooth HID emulator that turns your phone into a portable keyboard and trackpad. Plug and play, 100% open source. Perfect for kiosks, smart TVs, and quick workflow shortcuts.</p>
+            <div class="carousel-actions">
+              <a href="https://www.crowdsupply.com/techxartisan/openterface-keymod" class="md-button md-button--primary carousel-btn-preorder" target="_blank" rel="noopener noreferrer">
+                <span>Support NOW</span>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 140 140" class="carousel-btn-icon">
+                  <path d="M 68.3,9.7 8,70 68.3,130.3 Z" fill="#555" />
+                  <path d="M 71.7,9.7 V 130.3 L 132,70 Z" fill="#099" />
+                  <path d="m 90.7,91 c -6.6,0 -11.8,-3.6 -14,-12 l 8,-1.7 c 0.9,5.1 3.9,7 6.3,7 2.8,0 5,-1.9 5,-5.1 0,-8 -18.2,-8.2 -18.2,-20.1 0,-7.3 4.4,-12 12.8,-12 7.3,0 11.7,4.3 13.1,10.4 l -7.3,2.1 c -1.4,-4 -3.1,-5.7 -6,-5.7 -2.9,0 -4.5,1.8 -4.5,4.7 0,6.4 18.2,6.9 18.2,20.3 0.2,7.2 -4.9,12.1 -13.4,12.1 z" fill="#FFF" />
+                  <path d="m 60.7,63.9 h -8.2 v -3.6 c 0,-4.7 -2.1,-6 -5.3,-6 -3.2,0 -5.3,1.3 -5.3,6 v 17.4 c 0,4.7 2.1,6 5.3,6 3.2,0 5.3,-1.3 5.3,-6 v -3.8 h 8.2 v 2.7 c 0,10.5 -5.6,14.3 -13.5,14.3 -7.9,0 -13.5,-3.8 -13.5,-14.3 V 61.4 c 0,-10.5 5.6,-14.3 13.5,-14.3 7.9,0 13.5,3.8 13.5,14.3 z" fill="#FFF" />
+                </svg>
+              </a>
+              <a href="{{ 'product/keymod/' | url }}" class="md-button carousel-btn-docs">
+                <span>View Docs</span>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-content-right">
+            <img src="{{ 'https://assets2.openterface.com/images/keymod/2in1.webp' | url }}" alt="Openterface KeyMod Series" loading="eager" draggable="false" fetchpriority="high" data-slide-images='["{{ 'https://assets2.openterface.com/images/keymod/2in1.webp' | url }}", "{{ 'https://assets2.openterface.com/images/keymod/keymod.webp' | url }}", "{{ 'https://assets2.openterface.com/images/keymod/feature.webp' | url }}"]' class="carousel-random-image">
+          </div>
+        </div>
+
+        <!-- Slide 2: KVM-GO Series -->
+        <div class="carousel-slide" data-slide-index="2">
           <div class="carousel-content-left">
             <div class="carousel-category">KVM-GO Series</div>
             <h1 class="carousel-headline">The Ultra-Compact KVM That Fits on Keychain</h1>
@@ -68,21 +94,21 @@
                 <span>View Docs</span>
               </a>
               <div class="carousel-funding-stats">
-                <span class="funding-amount">$94,614</span>
+                <span class="funding-amount">$95,052</span>
                 <span class="funding-text">Funded on Dec 30, 2025</span>
                 <span class="funding-separator">|</span>
-                <span class="funding-backers"><span class="funding-backers-count">447</span> <span>Backers</span></span>
+                <span class="funding-backers"><span class="funding-backers-count">449</span> <span>Backers</span></span>
               </div>
               <div class="carousel-countdown" id="kvm-go-countdown"></div>
             </div>
           </div>
           <div class="carousel-content-right">
-            <img src="{{ 'https://assets.openterface.com/images/cover/kvm-go-triple.webp' | url }}" alt="KVM-GO Series" loading="eager" draggable="false" fetchpriority="high" data-slide-images='["{{ 'https://assets.openterface.com/images/cover/kvm-go-triple.webp' | url }}", "{{ 'https://assets.openterface.com/images/cover/kvm-go-triple-2.webp' | url }}"]' class="carousel-random-image">
+            <img data-src="{{ 'https://assets.openterface.com/images/cover/kvm-go-triple.webp' | url }}" alt="KVM-GO Series" loading="lazy" draggable="false" class="carousel-lazy-image carousel-random-image" data-slide-images='["{{ 'https://assets.openterface.com/images/cover/kvm-go-triple.webp' | url }}", "{{ 'https://assets.openterface.com/images/cover/kvm-go-triple-2.webp' | url }}"]'>
           </div>
         </div>
 
-        <!-- Slide 2: Mini-KVM -->
-        <div class="carousel-slide" data-slide-index="2">
+        <!-- Slide 3: Mini-KVM -->
+        <div class="carousel-slide" data-slide-index="3">
           <div class="carousel-content-left">
             <div class="carousel-category">Mini-KVM Series</div>
             <h1 class="carousel-headline">The Compact KVM Solution for Professionals</h1>
@@ -101,35 +127,15 @@
                 <span>View Docs</span>
               </a>
               <div class="carousel-funding-stats">
-                <span class="funding-amount">$495,189</span>
+                <span class="funding-amount">$495,447</span>
                 <span class="funding-text">Funded on Jun 13, 2024</span>
                 <span class="funding-separator">|</span>
-                <span class="funding-backers"><span class="funding-backers-count">3,703</span> <span>Backers</span></span>
+                <span class="funding-backers"><span class="funding-backers-count">3,705</span> <span>Backers</span></span>
               </div>
             </div>
           </div>
           <div class="carousel-content-right">
             <img data-src="{{ 'https://assets.openterface.com/images/cover/mini-kvm-toolkit.webp' | url }}" alt="Openterface Mini-KVM" loading="lazy" draggable="false" class="carousel-lazy-image carousel-random-image" data-slide-images='["{{ 'https://assets.openterface.com/images/cover/mini-kvm-toolkit.webp' | url }}", "{{ 'https://assets.openterface.com/images/cover/mini-kvm.webp' | url }}"]'>
-          </div>
-        </div>
-
-        <!-- Slide 3: KeyMod -->
-        <div class="carousel-slide" data-slide-index="3">
-          <div class="carousel-content-left">
-            <div class="carousel-category">KeyMod Series</div>
-            <h1 class="carousel-headline">Turn Your Phone into a Mini Keyboard</h1>
-            <p class="carousel-description">A compact USB + Bluetooth HID emulator that turns your phone into a portable keyboard and trackpad. Plug and play, 100% open source. Perfect for kiosks, smart TVs, and quick workflow shortcuts.</p>
-            <div class="carousel-actions">
-              <a href="{{ 'product/keymod/' | url }}" class="md-button md-button--primary carousel-btn-secondary">
-                <span>Learn More</span>
-              </a>
-              <a href="{{ 'product/keymod/' | url }}" class="md-button carousel-btn-docs">
-                <span>View Docs</span>
-              </a>
-            </div>
-          </div>
-          <div class="carousel-content-right">
-            <img data-src="{{ 'https://assets2.openterface.com/images/keymod/2in1.webp' | url }}" alt="Openterface KeyMod Series" loading="lazy" draggable="false" class="carousel-lazy-image carousel-random-image" data-slide-images='["{{ 'https://assets2.openterface.com/images/keymod/2in1.webp' | url }}", "{{ 'https://assets2.openterface.com/images/keymod/keymod.webp' | url }}", "{{ 'https://assets2.openterface.com/images/keymod/feature.webp' | url }}"]'>
           </div>
         </div>
 
@@ -165,8 +171,8 @@
               <div class="progress-bar progress-bar--active" id="progress-1"></div>
             </div>
             <div class="progress-labels">
-              <div class="progress-label-small" id="label-small-1">KVM-GO Series</div>
-              <div class="progress-label-large" id="label-large-1">The Ultra-Compact KVM That Fits on Your Keychain</div>
+              <div class="progress-label-small" id="label-small-1">KeyMod Series</div>
+              <div class="progress-label-large" id="label-large-1">Turn Your Phone into a Mini Keyboard</div>
             </div>
           </div>
 
@@ -176,8 +182,8 @@
               <div class="progress-bar" id="progress-2"></div>
             </div>
             <div class="progress-labels">
-              <div class="progress-label-small" id="label-small-2">Mini-KVM Series</div>
-              <div class="progress-label-large" id="label-large-2">The Compact KVM Solution for Professionals</div>
+              <div class="progress-label-small" id="label-small-2">KVM-GO Series</div>
+              <div class="progress-label-large" id="label-large-2">The Ultra-Compact KVM That Fits on Your Keychain</div>
             </div>
           </div>
 
@@ -187,8 +193,8 @@
               <div class="progress-bar" id="progress-3"></div>
             </div>
             <div class="progress-labels">
-              <div class="progress-label-small" id="label-small-3">KeyMod Series</div>
-              <div class="progress-label-large" id="label-large-3">Turn Your Phone into a Mini Keyboard</div>
+              <div class="progress-label-small" id="label-small-3">Mini-KVM Series</div>
+              <div class="progress-label-large" id="label-large-3">The Compact KVM Solution for Professionals</div>
             </div>
           </div>
 
