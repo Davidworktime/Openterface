@@ -319,6 +319,19 @@ nav:
   - Updates:
     - Updates: app/updates/index.md
   - FAQs: app/faq.md
+- Tutorial:
+  - KVM Series:
+    - Overview: tutorial/kvm/index.md
+    - Getting Started: tutorial/kvm/01-getting-started.md
+    - Basic Operations: tutorial/kvm/02-basic-operations.md
+    - Advanced Features: tutorial/kvm/03-advanced-features.md
+    - Troubleshooting: tutorial/kvm/04-troubleshooting.md
+  - KeyMod:
+    - Overview: tutorial/keymod/index.md
+    - Getting Started: tutorial/keymod/01-getting-started.md
+    - Keyboard & Mouse: tutorial/keymod/02-keyboard-mouse.md
+    - Advanced Features: tutorial/keymod/03-advanced-features.md
+    - Troubleshooting: tutorial/keymod/04-troubleshooting.md
 - Videos: videos.md
 - Use Cases: use-cases.md
 - Shop: https://shop.techxartisan.com
