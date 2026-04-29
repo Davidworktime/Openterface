@@ -26,7 +26,7 @@ To get your Openterface™ KVM gadgets up and running, you'll need to install on
     Download or build from source for **Openterface MacOS**:
 
     [:octicons-arrow-right-24: Install from App Store](/appstore) <br>
-    [:octicons-download-24: Download portable DMG](macos/dmg-installation.md) <br>
+    [:octicons-download-24: Download portable DMG](https://openterface.com/app/macos/dmg-installation/) <br>
     [:octicons-mark-github-16: Openterface_MacOS](https://github.com/TechxArtisanStudio/Openterface_MacOS) <br>
     [:octicons-play-24: Watch Demo](https://youtu.be/m7OpUem0zqY?si=tclfl0Jl77tmE6_e)
 
