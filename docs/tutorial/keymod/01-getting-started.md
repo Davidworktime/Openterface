@@ -1,122 +1,119 @@
-# KeyMod Tutorial 01 — Getting Started
-
-**Audience:** Beginners — first-time KeyMod users
-
+---
+title: "KeyMod Tutorial - Getting Started"
+description: "Install the KeyMod app, connect to your KeyMod device, and send your first keystroke in under 5 minutes."
+keywords: "KeyMod getting started, KeyMod setup, KeyMod installation, connect KeyMod"
 ---
 
-## 1. What Is KeyMod?
+# 1. Getting Started
 
-KeyMod is a **keyboard and mouse emulator** — a compact USB device that lets you share a single keyboard and mouse between your host computer and a target device.
+Install the KeyMod app, connect to your KeyMod hardware, and send your first keystroke in under 5 minutes.
 
-Unlike KVM devices, KeyMod does **not** capture video. It focuses on reliable HID (Human Interface Device) emulation: your keyboard and mouse signals are translated and routed to whichever machine you select.
+## What You Need
 
-This makes KeyMod ideal for:
-- Using your favorite mechanical keyboard with a headless server or Raspberry Pi
-- Switching peripherals between a desktop PC and a laptop without unplugging
-- Managing devices where video is handled by a separate monitor or KVM
+- **Openterface KeyMod hardware** — powered on and within range
+- **Phone or tablet** — Android or iOS/iPadOS with the KeyMod app installed
+- **USB cable** (for initial setup) — USB-C to connect your phone to the KeyMod device
+- **Bluetooth** (optional) — for wireless connection after initial setup
 
-## 2. What You Need
+## Step 1: Install the KeyMod App
 
-### Hardware
+**Android:**
 
-- **KeyMod device** — Openterface KeyMod
-- **Host computer** — Running macOS, Windows, or Linux
-- **Target device** — Any computer with a USB port (server, Raspberry Pi, SBC, etc.)
-- **USB cable** — From KeyMod to your host computer (power + data)
-- **USB cable** — From KeyMod to the target device (HID emulation)
+1. Open your phone's browser and go to the [KeyMod GitHub Releases page](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android/releases)
+2. Download the latest `.apk` file
+3. Tap the downloaded file to install
+4. If Android asks, allow **"Install unknown apps"** for your browser
 
-### Peripherals
+Alternatively, build from source — see [Build from Source](#build-from-source) below.
 
-- **Keyboard** — Plug into the KeyMod's peripheral port
-- **Mouse** — Plug into the KeyMod's peripheral port (or use a combo keyboard+mouse dongle)
+**iOS / iPadOS:**
 
----
+KeyMod is available on the App Store for iPhone and iPad running iOS 16 or later.
 
-## 3. Installation
+## Step 2: Connect to Your KeyMod Device
 
-### Host Application
+KeyMod connects to the Openterface KeyMod hardware in two ways:
 
-| Platform | Application | Download |
-|----------|------------|----------|
-| **macOS** | Openterface for macOS | [App Store](/appstore) or [DMG](macos/dmg-installation.md) |
-| **Windows** | Openterface QT | [GitHub Releases](https://github.com/TechxArtisanStudio/Openterface_QT/releases) |
-| **Linux** | Openterface QT | [Flatpak](https://flathub.org/apps/com.openterface.openterfaceQT), .deb, .rpm, AppImage |
+### USB Connection (recommended for first-time setup)
 
-### macOS Permissions
+1. Plug your phone into the KeyMod device using a USB-C cable
+2. Open the KeyMod app
+3. Tap the connection icon (top-right corner of the main screen)
+4. Tap **"USB Connection"**
+5. Accept the USB permission prompt (Android) or confirm the connection (iOS)
+6. You should see a green **"Connected"** status indicator
 
-On first launch, macOS may request:
+### Bluetooth Connection (wireless)
 
-| Permission | Why |
-|-----------|-----|
-| **Accessibility** | Required for HID mouse control in Relative mode |
-| **Camera** | Not required for KeyMod (no video) |
+1. Make sure Bluetooth is enabled on your phone
+2. Open KeyMod and tap the connection icon
+3. Tap **"Bluetooth Connection"**
+4. Wait for your KeyMod device to appear in the scan list
+5. Tap it to pair
+6. You should see a green **"Connected"** status indicator
 
-### Linux Permissions
+> **Tip:** Enable **"Auto-connect on startup"** in the connection dialog so KeyMod reconnects automatically every time you open it. The app remembers your last connection type (USB or BLE).
 
-- Add your user to the `dialout` group: `sudo usermod -a -G dialout $USER`
-- Install udev rules for device access
-- **BrlTTY conflict:** The `brltty` service may claim the serial chip — see [Troubleshooting](04-troubleshooting.md)
+## Step 3: Pick Your Mode — Welcome & Guide
 
-### Windows
-
-- The installer bundles the CH340 serial driver. For portable builds, install separately.
-
----
-
-## 4. Connecting KeyMod
+After launching, you'll see the **Welcome & Guide** screen with mode cards:
 
 ```
-┌─────────────┐     USB cable      ┌─────────────┐
-│  KEYBOARD   │───────────────────▶│             │
-└─────────────┘                    │   KeyMod    │       USB cable       ┌─────────────┐
-                                   │   Device    │──────────────────────▶│   TARGET    │
-┌─────────────┐                    │             │                       │  COMPUTER   │
-│   MOUSE     │───────────────────▶│             │                       └─────────────┘
-└─────────────┘                    └──────┬──────┘
-                                          │
-                               USB cable  │
-                                          ▼
-                                 ┌─────────────┐
-                                 │    HOST     │
-                                 │  COMPUTER   │
-                                 │  (this app) │
-                                 └─────────────┘
+Portrait mode (phone held upright):     Landscape mode (phone held sideways):
+
++-------------------+                   +-------------------------------+
+|  KeyMod           |                   | KeyMod      | KB  | GP  | MC |
+| Choose mode       |                   |             |     |     |    |
+|                   |                   |             | SC  | VC  | PR |
+| [Keyboard] [Game] |
+| [Macros ] [Short] |                   Tap any card to enter that mode
+| [Voice  ] [Present]                   or use the sidebar (hamburger)
++-------------------+                   menu to navigate.
+
+"Remember my choice" checkbox: skips this screen next time.
+"Skip" button: goes directly to last-used mode.
 ```
 
-1. Plug your **keyboard and mouse** into the KeyMod's peripheral USB port(s)
-2. Connect the KeyMod's **host USB cable** to your host computer
-3. Connect the KeyMod's **target USB cable** to the target device
-4. Launch the Openterface application on your host
+**"Remember my choice"** — check this box to skip the Welcome screen on future launches and go directly to your last-used mode.
 
----
+**"Skip" button** — bypass the Welcome screen and enter your previously-used mode immediately.
 
-## 5. First Use
+## Step 4: Send Your First Keystroke
 
-### USB Switch
+1. Select **Keyboard & Mouse** mode
+2. Tap any key on the on-screen keyboard
+3. The corresponding keystroke is sent to the target computer
 
-The KeyMod routes your keyboard and mouse to one of two destinations:
+That's it! You're now controlling your target computer remotely.
 
-- **Switch to Host** — Your peripherals control the host computer (normal use)
-- **Switch to Target** — Your peripherals control the target device (HID emulation)
+## Connection State Indicators
 
-Toggle the USB switch via:
-- The hardware switch on the KeyMod device
-- The software toggle in the application toolbar
-- A configured keyboard shortcut
+| Indicator | Meaning |
+|---|---|
+| **Green** (connected icon) | Active connection, ready to send input |
+| **Amber/Blue** (connecting icon) | Connection in progress |
+| **Gray** (disconnected icon) | No active connection |
+| **Signal bars** | BLE signal strength or USB active status |
 
-### Verifying Connection
+## Build from Source (Android, for Developers)
 
-In the application:
-- **Keyboard indicator:** green = connected, orange = not found
-- **Mouse indicator:** green = connected, orange = not found
-- **Serial port:** should show a port name (e.g., `/dev/ttyUSB*`, `COM*`, or `cu.usbserial-*`) and baud rate
+```bash
+# Clone the repository
+git clone https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android.git
+cd Openterface_KeyMod_Android
 
-If indicators show orange, see [Troubleshooting](04-troubleshooting.md).
+# Build (requires Java 21 and Android SDK 35)
+./gradlew assembleDebug
 
----
+# The APK will be at:
+ls app/build/outputs/apk/debug/KeyMod-debug.apk
 
-## 6. Next Steps
+# Install on a connected device
+adb install -r app/build/outputs/apk/debug/KeyMod-debug.apk
+```
 
-- **[Keyboard & Mouse →](02-keyboard-mouse.md)** — Input modes, layouts, performance
-- **[Advanced Features →](03-advanced-features.md)** — Firmware, macros, serial debug
+## Next Steps
+
+- **[Keyboard & Mouse →](02-keyboard-mouse.md)** — Typing, modifiers, touchpad, and text input
+- **[Advanced Features →](03-advanced-features.md)** — Gamepad, Macros, Shortcuts, Voice Input, and more
 - **[Troubleshooting →](04-troubleshooting.md)** — Common problems and solutions

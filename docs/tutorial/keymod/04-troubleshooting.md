@@ -1,184 +1,166 @@
-# KeyMod Tutorial 04 — Troubleshooting
+---
+title: "KeyMod Tutorial - Troubleshooting"
+description: "Fix common KeyMod issues: connection problems, keys not registering, Bluetooth pairing failures, voice input errors, and more."
+keywords: "KeyMod troubleshooting, KeyMod not connecting, KeyMod Bluetooth issues, KeyMod keys not working"
+---
 
-Common problems and solutions for Openterface KeyMod.
+# 4. Troubleshooting
+
+Common problems and solutions for the KeyMod app on Android and iOS.
+
+## Connection Issues
+
+### Not Connected
+
+| Symptom | Solution |
+|---|---|
+| **"Not Connected"** indicator | Check cable connection; try re-plugging. For BLE, toggle Bluetooth off/on and re-pair. |
+| **USB permission denied** (Android) | Go to Android Settings → Apps → KeyMod → Permissions → enable USB. Re-plug the cable. |
+| **Bluetooth won't pair** | Toggle Bluetooth off/on. Forget the device in Bluetooth settings and re-pair. Make sure the KeyMod device is in pairing mode. |
+| **Device not showing in scan** (iOS) | Check that Bluetooth is enabled. Verify the Openterface device is powered on and in BLE advertising mode. Ensure Bluetooth permission is granted to KeyMod in Settings → Privacy & Security → Bluetooth. |
+| **Connection drops frequently** (iOS) | Check the RSSI value below the BLE button. Below -75 dBm indicates weak signal — move closer. Remove physical obstructions. Check for BLE interference. |
+| **FFF2 characteristic not found** (iOS) | This indicates a firmware compatibility issue. Update the Openterface firmware to the latest version. |
+
+### Connection State Indicators
+
+| Indicator | Android | iOS |
+|---|---|---|
+| **Connected** | Green icon | Green icon with RSSI displayed |
+| **Connecting** | Amber icon | Blue icon (scanning) |
+| **Disconnected** | Gray icon | Gray/Disabled (permission denied or Bluetooth off) |
+| **Signal bars** | BLE signal strength or USB active | RSSI in dBm below BLE button |
+
+### Auto-Connect
+
+- **Android:** Enable "Auto-connect on startup" in the connection dialog. KeyMod remembers your last connection type (USB or BLE) and last paired BLE device.
+- **iOS:** The app automatically begins scanning for nearby Openterface devices after a brief delay on launch.
+
+### USB Attach/Detach Detection (Android)
+
+KeyMod monitors Android's USB attach/detach broadcast events. If you unplug the USB cable, the connection status updates immediately. Re-plugging triggers a reconnection attempt if auto-connect is enabled.
 
 ---
 
-## Device Not Detected
+## Keyboard Issues
 
-### Symptoms
-- Keyboard and mouse indicators show orange or gray
-- Serial port shows "N/A"
-- USB switch toggle has no effect
+### Keys Not Registering
 
-### Diagnosis
+| Symptom | Solution |
+|---|---|
+| **Keys not sending** | Verify the connection shows "Connected" (green). Try switching modes and back. Check that the target computer recognizes the KeyMod device as a keyboard. |
+| **Keys not registering** (iOS) | Verify BLE is connected (green icon). Check the target computer's keyboard is recognizing input. Increase **BLE Key Delay** in Settings → General (try 20ms or higher). |
+| **Macro doesn't execute** | Verify you're connected. Check that the macro data contains valid tokens (no typos in token names). |
+| **Wrong characters appearing** (iOS) | Check the **Target OS** setting — mismatched OS can cause key mapping issues. Verify the target computer's keyboard layout (QWERTY vs AZERTY). Check for stuck modifier keys in the sidebar. |
 
-**Linux:**
-```bash
-lsusb | grep "1a86"
-dmesg | tail -20
-ls /dev/ttyUSB*   # serial chip
-```
+### Unicode Characters Not Working
 
-Expected: `1a86:7523` or `1a86:fe0c` (CH9329 or CH32V208 serial chip).
+Non-ASCII characters (Chinese, Japanese, emoji) require OS-specific input methods:
 
-**macOS:** Apple Menu > About This Mac > System Report > Hardware > USB — look for KeyMod/serial device.
+| OS | Method |
+|---|---|
+| **Windows** | Alt+NumPad hexadecimal Unicode input |
+| **Linux** | Ctrl+Shift+U followed by hex code |
+| **macOS** | Option+hex input |
 
-**Windows:** Device Manager > "Ports (COM & LPT)" — should show "USB-SERIAL CH340 (COMx)".
-
-### Solutions
-
-| Problem | Fix |
-|---------|-----|
-| Device not in lsusb/System Report | Try different USB cable/port |
-| Permission denied | Add user to `dialout` group (Linux) |
-| Detected then disappears | `brltty` claiming the serial port — see below |
+If Unicode characters appear incorrectly, verify the **Target OS** is set correctly.
 
 ---
 
-## BrlTTY Conflict (Linux)
+## TouchPad Issues
 
-**The most common cause of KeyMod failure on Linux.**
-
-The `brltty` (Braille terminal) service claims USB serial devices including the CH9329/CH32V208 chip.
-
-### Symptoms
-- Device is detected in `lsusb`
-- Serial port appears briefly then disappears
-- `/dev/ttyUSB*` returns "Device or resource busy"
-
-### Fix
-```bash
-# Option 1: Remove brltty (if you don't need Braille support)
-sudo apt remove brltty          # Debian/Ubuntu
-sudo dnf remove brltty          # Fedora
-
-# Option 2: Blacklist the device (preferred)
-echo 'ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ENV{BRLTTY_BRAILLE_DRIVER}=""' | sudo tee /etc/udev/rules.d/99-brltty-openterface.rules
-sudo udevadm control --reload-rules
-```
+| Symptom | Solution |
+|---|---|
+| **Touchpad not responding** (Android) | Check that Haptic Feedback is enabled in Settings. Try the TouchPad Help overlay (?) to verify gesture support. |
+| **Scroll not working** | Check touchpad scroll sensitivity in Settings → General. |
 
 ---
 
-## Keyboard/Mouse Not Working on Target
+## Gamepad Issues (iOS)
 
-### Symptoms
-- Typing on the keyboard has no effect on the target
-- Mouse movements don't register on the target
+### Analog Stick Not Responding
 
-### Steps
-
-1. **Check USB switch** — make sure KeyMod is switched to **Target**, not Host
-2. **Verify serial port** — should show a port name, not "N/A"
-3. **Try switching baud rate** — 9600 or 115200
-4. **Check target device** — is it powered on and accepting input?
-5. **Try the other USB cable** — ensure both host and target cables are connected
-
-### Mouse-Specific Issues
-
-- **Relative mode on macOS:** Requires Accessibility permission. Check **System Settings > Privacy & Security > Accessibility**
-- **Mouse lag:** Try a higher performance preset or increase the baudrate
-- **Serial port conflicts (Linux):** Close other apps using the port: `sudo lsof /dev/ttyUSB0`
+| Symptom | Solution |
+|---|---|
+| **Stick not producing action** | Check the key mapping in Edit Mode → Key Mapping. Verify the stick isn't stuck in the dead zone (center area, 0.15 threshold). Check hysteresis thresholds — the stick needs to move past 0.6 activation to trigger. |
+| **Buttons sending wrong keys** | Open Edit Mode → Key Mapping and check the button's key assignment. Tap the button to open the configuration popup and correct the mapping. Reset positions to defaults using the reset button. |
 
 ---
 
-## Keys Mapped Incorrectly
+## Voice Input Issues
 
-### Wrong Keyboard Layout
+### Speech Recognizer Unavailable (Android)
 
-Ensure the correct layout is selected in **Settings > Keyboard Layout**:
+Install Google Voice Typing from Play Store. On Android 11+, KeyMod needs the queries permission (included in the APK).
 
-| Symptom | Likely Cause |
-|---------|-------------|
-| `@` and `"` swapped | UK vs US layout mismatch |
-| `Y` and `Z` swapped | QWERTY vs QWERTZ mismatch |
-| `A` and `Q` swapped | QWERTY vs AZERTY mismatch |
-| `¥` key not working | Japanese layout not selected |
+### Whisper Model Not Downloading (iOS)
 
-### Wrong Target OS
+| Symptom | Solution |
+|---|---|
+| **Download fails or stalls** | Check network connectivity — model files are large and require a stable connection. Check available storage — the `base` model is ~142 MB, `small` is ~466 MB. Try a smaller model first (tiny or base). |
 
-Ensure the target OS is set correctly in the toolbar or settings. Key conventions (Cmd vs Win vs Super) differ across OSes.
+### Silence Detection Not Working
 
----
+| Symptom | Solution |
+|---|---|
+| **Recording continues when not speaking** | Check the Auto-Pause on Silence toggle. Reduce background noise. Speak clearly and close to the microphone. |
+| **Recording stops immediately** | Speak more loudly or reduce the silence detection timeout. |
 
-## USB Serial Driver Issues
+### Voice Text Not Sending (Android)
 
-### macOS
+Check the connection status. The "Send" button is disabled when not connected.
 
-```bash
-kextstat | grep com.apple.driver.usb.cdc
-```
+### Permissions (iOS)
 
-If needed, install WCH CH34x driver from [WCH CH34xDriver GitHub](https://github.com/WCHSoftGroup/ch34xser_macos).
-
-### Windows
-
-If the serial chip doesn't appear in Device Manager, install the CH340/CH341 driver. The installer bundles it; for portable builds, download separately.
-
-### Linux
-
-The CH340 driver (`ch341` module) is built into the kernel:
-```bash
-lsmod | grep ch341
-dmesg | grep ch341
-```
+Voice Input requires **Microphone** and **Speech Recognition** permissions. If denied, enable them in Settings → Privacy & Security.
 
 ---
 
-## Firmware Update Fails
+## AI Issues
 
-### Recovery
+### API Key Not Working (iOS)
 
-1. Keep the device powered
-2. Close and reopen the Firmware Update Tool, retry
-3. Use the Serial Reset Tool if unresponsive
-4. Contact support if bricked
+| Symptom | Solution |
+|---|---|
+| **"API key not configured"** | Verify the API key is correct — check for extra spaces or typos. Check the API Base URL — must include the full path (e.g., `https://api.openai.com/v1`). Verify the model name exists on the provider. For local providers (Ollama), ensure the API Key Optional flag is set. |
 
----
+### Text Refinement Slow
 
-## Logging and Diagnostics
-
-### Enable Logging
-
-- **macOS:** Settings > Logging Setting > Log to file (`~/Documents/openterface.log`)
-- **Qt:** Preferences > Log > set log level and file path
-
-### Serial Console (Qt)
-
-Open via **Device > Serial Port Debug** — shows real-time serial protocol messages with filters for Keyboard, Mouse, HID events.
+Check your network connection. Try a faster model — smaller models (gpt-3.5-turbo, llama3-8b) respond faster. Use a local provider (Ollama) to eliminate network latency. Check the AI Request History for error messages.
 
 ---
 
-## Platform-Specific Issues
+## App Crashed or Frozen (iOS)
 
-### Linux: Qt Platform Plugin
-
-`This application failed to start because no Qt platform plugin could be initialized.`
-
-```bash
-export QT_QPA_PLATFORM=xcb
-```
-
-### Windows: CH340 Driver
-
-If the driver fails to install: disable Driver Signature Enforcement temporarily, install manually via Device Manager.
+1. Force quit the app (swipe up from the app switcher) and relaunch
+2. Restart your iOS device
+3. Check iOS storage — low storage can cause app instability
 
 ---
 
-## Factory Reset
+## Settings Not Persisting (iOS)
 
-1. Use the Serial Reset Tool from Settings (macOS) or Device menu (Qt)
-2. Reconnect the device after reset
+Settings are stored in UserDefaults and should persist across app launches. If settings reset unexpectedly, check for iOS iCloud sync conflicts. Use Reset to Defaults and reconfigure if needed.
 
-## Connection Recovery
+---
 
-The applications handle automatic recovery for:
-- Device disconnect/reconnect (hot-plug)
-- Communication timeouts
-- Serial port recovery
+## Logs and Debugging (iOS)
 
-## Submitting Defect Reports
+KeyMod has a built-in LogManager that categorizes logs:
 
-1. Enable log file logging
-2. Reproduce the issue
-3. Submit via [GitHub Issues](https://github.com/TechxArtisanStudio/Openterface_QT/issues) or email to info@techxartisan.com
+| Category | What It Logs |
+|---|---|
+| **BLE** | Device discovery, connection, disconnection, data transmission, RSSI |
+| **Keyboard** | Key presses, releases, modifier state, mode changes |
+| **VoiceInput** | Recording start/stop, transcription results, silence detection |
+| **Clipboard** | Clipboard changes detected, content sent/dismissed |
+| **Macro** | Macro execution, token processing, timing |
+
+---
+
+## Need More Help?
+
+If you're still experiencing issues:
+
+- **Bug reports:** [GitHub Issues (Android)](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android/issues) / [GitHub Issues (iOS)](https://github.com/TechxArtisanStudio/Openterface_KeyMod_iOS/issues)
+- **Community:** [TechxArtisan Discord](https://discord.gg/techxartisan)
+- **Openterface documentation:** [GitHub Repository](https://github.com/TechxArtusStudio/Openterface)
