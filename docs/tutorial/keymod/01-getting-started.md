@@ -115,5 +115,3 @@ adb install -r app/build/outputs/apk/debug/KeyMod-debug.apk
 ## Next Steps
 
 - **[Keyboard & Mouse →](02-keyboard-mouse.md)** — Typing, modifiers, touchpad, and text input
-- **[Advanced Features →](03-advanced-features.md)** — Gamepad, Macros, Shortcuts, Voice Input, and more
-- **[Troubleshooting →](04-troubleshooting.md)** — Common problems and solutions

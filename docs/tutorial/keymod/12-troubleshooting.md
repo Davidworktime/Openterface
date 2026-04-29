@@ -4,7 +4,7 @@ description: "Fix common KeyMod issues: connection problems, keys not registerin
 keywords: "KeyMod troubleshooting, KeyMod not connecting, KeyMod Bluetooth issues, KeyMod keys not working"
 ---
 
-# 4. Troubleshooting
+# 12. Troubleshooting
 
 Common problems and solutions for the KeyMod app on Android and iOS.
 

@@ -152,5 +152,5 @@ In landscape split mode, a **scrollable shortcut strip** appears above the two k
 
 ## Next Steps
 
-- **[Advanced Features →](03-advanced-features.md)** — Gamepad, Numpad, Shortcuts, Macros, Voice Input, Presentation, Settings, and AI
-- **[Troubleshooting →](04-troubleshooting.md)** — Common problems and solutions
+- **[Target-Specific Keyboard →](03-target-keyboard.md)** — Keyboard layouts and target OS mapping
+- **[Troubleshooting →](12-troubleshooting.md)** — Common problems and solutions

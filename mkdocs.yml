@@ -330,8 +330,16 @@ nav:
     - Overview: tutorial/keymod/index.md
     - Getting Started: tutorial/keymod/01-getting-started.md
     - Keyboard & Mouse: tutorial/keymod/02-keyboard-mouse.md
-    - Advanced Features: tutorial/keymod/03-advanced-features.md
-    - Troubleshooting: tutorial/keymod/04-troubleshooting.md
+    - Target-Specific Keyboard: tutorial/keymod/03-target-keyboard.md
+    - Shortcut Hub: tutorial/keymod/04-shortcuts.md
+    - Macros: tutorial/keymod/05-macros.md
+    - Voice Input: tutorial/keymod/06-voice-input.md
+    - AI Integration: tutorial/keymod/07-ai.md
+    - Gamepad: tutorial/keymod/08-gamepad.md
+    - Numpad: tutorial/keymod/09-numpad.md
+    - Presentation: tutorial/keymod/10-presentation.md
+    - Settings: tutorial/keymod/11-settings.md
+    - Troubleshooting: tutorial/keymod/12-troubleshooting.md
 - Videos: videos.md
 - Use Cases: use-cases.md
 - Shop: https://shop.techxartisan.com
