@@ -49,7 +49,7 @@ This is what sets KVM devices apart from remote desktop software: you can contro
 
 | Platform | Application | Download |
 |----------|------------|----------|
-| **macOS** | Openterface for macOS | [App Store](/appstore) or [DMG](macos/dmg-installation.md) |
+| **macOS** | Openterface for macOS | [App Store](/appstore) or [DMG](app/mmacos/dmg-installation.md) |
 | **Windows** | Openterface QT | [GitHub Releases](https://github.com/TechxArtisanStudio/Openterface_QT/releases) |
 | **Linux** | Openterface QT | [Flatpak](https://flathub.org/apps/com.openterface.openterfaceQT), .deb, .rpm, AppImage |
 | **Android** | Openterface for Android | [Google Play](https://play.google.com/store/apps/details?id=com.openterface.AOS) |

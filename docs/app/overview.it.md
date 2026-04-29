@@ -26,7 +26,7 @@ Per far funzionare i tuoi gadget Openterface™ KVM, dovrai installare una delle
     Scarica o costruisci dal codice sorgente per **Openterface MacOS**:
 
     [:octicons-arrow-right-24: Installa dall'App Store](/appstore) <br>
-    [:octicons-download-24: Scarica DMG Portatile](https://openterface.com/app/macos/dmg-installation/) <br>
+    [:octicons-download-24: Scarica DMG Portatile](/app/macos/dmg-installation.md) <br>
     [:octicons-mark-github-16: Openterface_MacOS](https://github.com/TechxArtisanStudio/Openterface_MacOS) <br>
     [:octicons-play-24: Guarda Demo](https://youtu.be/m7OpUem0zqY?si=tclfl0Jl77tmE6_e)
 

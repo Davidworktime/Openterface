@@ -26,7 +26,7 @@
     下载或从源代码构建**Openterface MacOS**：
 
     [:octicons-arrow-right-24: 从 App Store 安装](/appstore) <br>
-    [:octicons-download-24: 下载便携版 DMG](https://openterface.com/app/macos/dmg-installation/) <br>
+    [:octicons-download-24: 下载便携版 DMG](/app/macos/dmg-installation.md) <br>
     [:octicons-mark-github-16: Openterface_MacOS](https://github.com/TechxArtisanStudio/Openterface_MacOS) <br>
     [:octicons-play-24: 观看演示](https://youtu.be/m7OpUem0zqY?si=tclfl0Jl77tmE6_e)
 

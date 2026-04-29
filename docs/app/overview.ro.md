@@ -26,7 +26,7 @@ Pentru a face funcționale gadget-urile Openterface™ KVM, va trebui să instal
     Descărcați sau construiți din codul sursă pentru **Openterface MacOS**:
 
     [:octicons-arrow-right-24: Instalați din App Store](/appstore) <br>
-    [:octicons-download-24: Descărcați DMG Portabil](https://openterface.com/app/macos/dmg-installation/) <br>
+    [:octicons-download-24: Descărcați DMG Portabil](macos/dmg-installation.md) <br>
     [:octicons-mark-github-16: Openterface_MacOS](https://github.com/TechxArtisanStudio/Openterface_MacOS) <br>
     [:octicons-play-24: Urmăriți Demo](https://youtu.be/m7OpUem0zqY?si=tclfl0Jl77tmE6_e)
 
