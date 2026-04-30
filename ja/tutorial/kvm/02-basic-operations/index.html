@@ -5132,6 +5132,35 @@
 <li><strong>Requirements:</strong> Accessibility permission on macOS</li>
 <li><strong>Exit:</strong> Global keyboard shortcut (macOS) or long-press Esc (Qt)</li>
 </ul>
+<h3 id="android-mouse-modes">Android Mouse Modes</h3>
+<p>The Android app offers three ways to control the target mouse, switchable in the settings panel:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>How It Works</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Absolute (Default)</strong></td>
+<td>Tap anywhere and the cursor jumps there and left-clicks. Position maps proportionally.</td>
+<td>Most tasks</td>
+</tr>
+<tr>
+<td><strong>Relative</strong></td>
+<td>Drag your finger; cursor moves relative to your drag, like a laptop trackpad. Lift your finger and cursor stays put.</td>
+<td>Fine cursor positioning</td>
+</tr>
+<tr>
+<td><strong>Absolute Drag</strong></td>
+<td>Tap and hold; cursor jumps and follows your finger. A "Drag" label appears. Release to drop.</td>
+<td>Dragging files, selecting text</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mouse buttons on Android:</strong> single tap = left-click, long press = right-click, double tap = double-click.</p>
 <h3 id="performance-presets-macos">Performance Presets (macOS)</h3>
 <p>Under <strong>Control &gt; Mouse Mode &gt; Performance Presets</strong>:</p>
 <table>
@@ -5217,6 +5246,36 @@
 - <strong>Ask Every Time:</strong> Prompts host or target each time
 - <strong>Host Paste:</strong> Always sends to target
 - <strong>Local Paste:</strong> Always pastes on host</p>
+<h3 id="android-on-screen-keyboard">Android On-Screen Keyboard</h3>
+<p>The Android app provides a full on-screen keyboard accessible via the keyboard button (⌨) at the bottom-right of the main screen:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ShortCut</strong></td>
+<td>Pre-built shortcuts: Ctrl+C/V, Win+L, Ctrl+Alt+Del, Alt+F4, etc.</td>
+</tr>
+<tr>
+<td><strong>Function</strong></td>
+<td>F1–F12, PrtSc, ScrLk, navigation keys (Ins, Home, PgUp, etc.), arrows</td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td>QWERTY layout with letters, numbers, punctuation, Backspace, Enter</td>
+</tr>
+<tr>
+<td><strong>Modifier keys</strong></td>
+<td>Ctrl, Shift, Alt, Win — toggle buttons that auto-reset after the next key</td>
+</tr>
+</tbody>
+</table>
+<p>To send a combination like <strong>Ctrl+Alt+Del</strong>: tap Ctrl (highlights), tap Alt (both highlight), tap Del. All modifiers reset automatically after the key is sent.</p>
+<p>The keyboard also supports <strong>different regional layouts</strong> (US, Japanese JIS, German QWERTZ, etc.) selectable in the settings panel. Zoom in/out buttons let you adjust key sizes.</p>
 <hr>
 <h2 id="3-video-settings">3. Video Settings</h2>
 <h3 id="resolution-display">Resolution Display</h3>
@@ -5323,6 +5382,14 @@
 </tbody>
 </table>
 <p>Switch via <strong>Preferences &gt; Video &gt; Media Backend</strong>. Restart after changing.</p>
+<h3 id="android-video-controls">Android Video Controls</h3>
+<p>On the Android app, video settings are accessed via the settings panel (Menu button ☰):</p>
+<ul>
+<li><strong>Video Format</strong> — Select resolution (1920×1080, 1280×720, 640×480) and frame rate (30fps, 60fps). Lower resolution/frame rate if video is choppy.</li>
+<li><strong>Controls</strong> — Real-time sliders for <strong>brightness</strong>, <strong>contrast</strong>, and <strong>hue</strong></li>
+<li><strong>Rotate/Flip</strong> — Rotate 90° CW/CCW, flip horizontally/vertically. Useful when the KVM device is mounted upside-down or sideways</li>
+</ul>
+<p>The settings persist between sessions — you only configure them once.</p>
 <hr>
 <h2 id="4-audio-from-target">4. Audio from Target</h2>
 <p>The HDMI capture chip extracts audio from the HDMI signal and presents it as a USB audio input to the host.</p>
@@ -5352,6 +5419,13 @@
 - Output format (MP4, AVI, MOV, MKV)
 - Video bitrate, audio codec
 - Output directory</p>
+<h3 id="android-screen-capture-recording">Android Screen Capture &amp; Recording</h3>
+<p>On Android, access via the settings panel:</p>
+<ul>
+<li><strong>Screen Capture</strong> — Tap to save a snapshot of the current video frame to your device's default media folder. Requires <strong>Storage permission</strong>.</li>
+<li><strong>Record Video</strong> — Tap to start/stop recording. A red recording indicator with timer appears at the top. Video saves to your device's default media folder.</li>
+</ul>
+<p><strong>Use cases:</strong> record the target's boot process, capture error messages, document configuration steps.</p>
 <hr>
 <h2 id="6-connection-indicators">6. Connection Indicators</h2>
 <table>
@@ -5420,7 +5494,7 @@
     <span class="md-icon" title="最終更新日">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 29, 2026 06:29:53 UTC"><span class="timeago" datetime="2026-04-29T06:29:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 29, 2026 06:29:53 UTC">2026-04-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 00:56:56 UTC"><span class="timeago" datetime="2026-04-30T00:56:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 00:56:56 UTC">2026-04-30</span>
   </span>
 
     
