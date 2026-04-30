@@ -286,6 +286,73 @@ Include this file when opening a GitHub issue.
 
 ---
 
+## iPadOS-Specific Issues
+
+> **Note:** iPadOS is only supported on **KVM-Go**. If you're using Mini-KVM or uConsole KVM Extension, the iPadOS app will not work.
+
+### Bluetooth Not Connecting
+
+**Symptom:** BLE button doesn't turn green, or no devices appear in the scan list.
+
+1. **Check Bluetooth is enabled** on your iPad — Settings > Bluetooth
+2. **Ensure KVM-Go is powered on** — the dongle should be plugged into the target PC's USB port
+3. **Bring the iPad closer** to the KVM-Go dongle — BLE range is typically up to 10 meters
+4. **Check iPad Bluetooth permission** — Settings > Privacy & Security > Bluetooth > ensure Openterface is allowed
+5. **Tap Refresh** in the BLE screen to restart the scan
+6. **Check the Openterface app Bluetooth permission** — if denied on first launch, re-enable in Settings
+
+### No Video Preview
+
+**Symptom:** BLE is connected but the screen is black or shows a guide image.
+
+1. **Check HDMI connection** — is the target PC's HDMI output firmly connected to the KVM-Go HDMI input?
+2. **Check the target's output** — is the target computer actually displaying something?
+3. **Try a lower resolution** — tap the Video button and select a lower resolution (720p or 480p)
+4. **Check camera permission** — Settings > Privacy & Security > Camera > ensure Openterface is allowed
+5. **Restart the app** — swipe up from recent apps and reopen
+
+### Mouse/Touch Not Responding
+
+**Symptom:** Video works but tapping the screen does nothing on the target.
+
+1. **Check BLE connection** — the BLE button should be green with an RSSI value
+2. **Try a different mouse mode** — toggle between Pan Mode and iPencil Mode
+3. **Disconnect and reconnect** — open the BLE screen, tap Disconnect, then Connect again
+4. **Check the target computer** — does it recognize the KVM-Go as a USB keyboard/mouse?
+
+### Keyboard Not Sending Keys
+
+**Symptom:** Mouse works but typing does nothing.
+
+1. **Make sure the floating keyboard is open** — tap the Keyboard button
+2. **Check BLE connection** — input goes through Bluetooth, not USB
+3. **Check keyboard mode** — try switching between Normal and Game mode
+4. **External keyboard:** if using a physical iPad keyboard, check that iPadOS is routing key events to the app
+
+### Audio Not Playing
+
+**Symptom:** Video works but you can't hear the target PC through the iPad.
+
+1. **Check the Audio button** — it should show a green speaker icon
+2. **Check microphone permission** — Settings > Privacy & Security > Microphone > ensure Openterface is allowed
+3. **Check iPad volume** — make sure the iPad isn't muted or at minimum volume
+4. **Check target audio output** — is the target PC configured to send audio over HDMI?
+
+### App Crashes or Freezes
+
+1. **Close and restart** the app
+2. **Lower the video resolution** — high resolution can strain older iPads
+3. **Check available storage** — low storage can cause instability
+4. **Update the app** — check the App Store for a newer version
+
+### Screenshots or Recordings Not Saving
+
+1. **Check Photo Library permission** — Settings > Privacy & Security > Photos > ensure Openterface is allowed
+2. **Check available storage** on your iPad
+3. **Browse via Files app** — recordings save to `Documents/Recordings/` even without Photo Library access
+
+---
+
 ## Factory Reset
 
 1. Use the Serial Reset Tool from Settings (macOS) or Device menu (Qt)
@@ -295,10 +362,11 @@ Include this file when opening a GitHub issue.
 ## Connection Recovery
 
 The applications handle automatic recovery for:
-- Device disconnect/reconnect (hot-plug)
+- Device disconnect/reconnect (hot-plug for USB, BLE reconnection for iPadOS)
 - Communication timeouts
 - Chipset fallbacks (MS2109 → MS2109S → MS2130S)
 - Serial port recovery
+- iPadOS BLE auto-reconnect (up to 3 attempts with 2-second delay)
 
 ## Submitting Defect Reports
 

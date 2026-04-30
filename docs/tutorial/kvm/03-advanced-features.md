@@ -215,6 +215,63 @@ sock.close()
 
 ---
 
+## iPadOS-Specific Features
+
+### Bluetooth Connection Management
+
+The iPadOS app connects to the KVM-Go dongle via **Bluetooth Low Energy (BLE)** for keyboard/mouse HID input:
+
+- **Auto-connect:** Enabled by default. On startup, the app scans for 5 seconds and auto-connects to the `kvm*` device with the strongest signal.
+- **Reconnection:** If the connection drops, the app attempts to reconnect up to 3 times with a 2-second delay.
+- **Signal monitoring:** RSSI updates every 2 seconds. The BLE button shows the signal strength (e.g., `-45 dBm`) with a color indicator: green (-50 to 0 dBm), orange (-70 to -50 dBm), red (below -70 dBm).
+- **Device scanning:** Only devices whose name starts with `kvm` (case-insensitive) appear in the list.
+- **Manual control:** Open the BLE screen to scan, connect, disconnect, or disable auto-connect.
+
+### Info Overlay
+
+Tap the **Info** button to display a real-time input status overlay in the top-right corner:
+
+```
+┌─ Input Status ────────┐
+│ Mouse                 │
+│ Mode: Absolute        │
+│ Position: 512.0, 384.0│
+│ Drag Mode: Active     │
+│ Scrolling: Inactive   │
+│ Keyboard              │
+│ Mode: Normal          │
+│ Caps Lock: OFF        │
+│ Modifiers: Ctrl, Shift│
+└───────────────────────┘
+```
+
+The overlay is transparent to touches — it doesn't block interaction with the video preview.
+
+### Screen Orientation Correction
+
+Tap the **Rotate** button to cycle through orientation correction modes: Normal, 90° CW, 180°, 90° CCW. This corrects the video preview when the KVM-Go dongle is mounted in a non-standard orientation. Rotation applies to both live preview and saved captures.
+
+### Idle Timer Disabled
+
+The app keeps the iPad screen **awake** during use by disabling the idle timer, preventing the iPad from auto-locking while monitoring the target PC.
+
+### Logging System
+
+The app includes a built-in `Logger` with category-based filtering:
+
+| Category | Covers |
+|---|---|
+| `bluetooth` | BLE scanning, connection, data transmission |
+| `mouse` | Mouse input, gesture detection, mode changes |
+| `keyboard` | Key events, modifier state, composite keys |
+| `camera` | Video recording, screenshots, photo capture |
+| `ui` | Touch handling, gesture recognition, preview layer |
+| `general` | App lifecycle, general info |
+
+Logging can be adjusted in the app source to reduce console noise.
+
+---
+
 ## Next Steps
 
 - **[Troubleshooting →](04-troubleshooting.md)** — Common problems and solutions

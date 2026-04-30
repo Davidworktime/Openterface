@@ -19,7 +19,7 @@ This is what sets KVM devices apart from remote desktop software: you can contro
 | Device | Form Factor | Key Feature |
 |--------|------------|-------------|
 | **Mini-KVM** | Compact USB dongle | Desktop KVM-over-USB |
-| **KVM-Go** | Toolkit-style portable | On-the-go KVM with built-in cables |
+| **KVM-Go** | Toolkit-style portable | On-the-go KVM with built-in cables, **iPadOS support via BLE** |
 | **uConsole KVM Extension** | Internal module | Built-in KVM for ClockworkPi uConsole |
 
 > Looking for **KeyMod** (keyboard & mouse emulator only, no video)? See the [KeyMod Tutorial](../../keymod/index.md).
@@ -53,6 +53,7 @@ This is what sets KVM devices apart from remote desktop software: you can contro
 | **Windows** | Openterface QT | [GitHub Releases](https://github.com/TechxArtisanStudio/Openterface_QT/releases) |
 | **Linux** | Openterface QT | [Flatpak](https://flathub.org/apps/com.openterface.openterfaceQT), .deb, .rpm, AppImage |
 | **Android** | Openterface for Android | [Google Play](https://play.google.com/store/apps/details?id=com.openterface.AOS) or [GitHub Releases](https://github.com/TechxArtisanStudio/Openterface_Android/releases) |
+| **iPadOS** | Openterface for iPadOS | [App Store](/app/ipados/) — **KVM-Go only** |
 
 ### Android Requirements
 
@@ -61,6 +62,16 @@ The Android app requires:
 - **Android 8.0 (API 26)** or later
 - **USB OTG support** — most modern phones support it (Samsung, Google Pixel, OnePlus). Verify by connecting a USB flash drive with an OTG adapter
 - **USB OTG cable or adapter** to connect the KVM device to your phone
+
+### iPadOS Requirements
+
+The iPadOS app requires:
+
+- **iPadOS 17.0** or later
+- **KVM-Go device** — iPadOS connects to the KVM-Go dongle via **Bluetooth Low Energy (BLE)** for keyboard/mouse input, and the USB capture card for video
+- **Camera and Microphone permissions** — needed for video preview and audio monitoring from the capture card
+- **Bluetooth permission** — required to discover and connect to the KVM-Go dongle for HID input
+- **Photo Library permission** (optional) — to save screenshots and recordings to the Photos app
 
 ### macOS Permissions
 
@@ -143,6 +154,39 @@ Connection order for Android:
 
 When connected successfully, the video preview switches from a placeholder to the target's live screen, and tapping the phone screen moves the cursor on the target.
 
+### Connecting via iPadOS
+
+The iPadOS app uses a different connection model: **BLE for input** and **USB capture for video**.
+
+```
+┌──────────────┐     HDMI      ┌──────────────────┐
+│              │ ────────────▶ │   KVM-Go Dongle   │
+│  Target PC   │               │                   │
+│  (screen)    │ ◀─── USB ──── │                   │
+└──────────────┘               └────────┬─────────┘
+                                        │
+                              ┌─────────┴─────────┐
+                              │   USB Capture     │ (video)
+                              │   BLE (FFF2)      │ (keyboard/mouse)
+                              └─────────┬─────────┘
+                                        │
+                              ┌─────────▼─────────┐
+                              │     iPad           │
+                              │  (Openterface)     │
+                              └───────────────────┘
+```
+
+Connection order for iPadOS:
+
+1. **Hardware:** Plug the KVM-Go dongle into the target PC's USB port and connect the HDMI input
+2. **Power on** the target computer
+3. **Open the app** on your iPad and grant camera, microphone, and Bluetooth permissions
+4. **Tap the BLE button** in the toolbar — the app scans for devices named `kvm*`
+5. **Tap Connect** next to your KVM-Go device — the button turns green with RSSI signal strength
+6. **Verify:** the video preview shows the target's screen, tapping sends clicks, typing sends keystrokes
+
+> **Note:** The iPadOS app only works with **KVM-Go**. Mini-KVM and uConsole KVM Extension do not have BLE support.
+
 ---
 
 ## 5. First Launch
@@ -173,6 +217,19 @@ On first launch, the Android app requests:
 | **Storage** | Save screenshots and recordings | Can't save captures |
 
 Grant all permissions for full functionality. A system USB permission dialog also appears when the KVM device is detected — tap **Allow**.
+
+### iPadOS Permissions
+
+On first launch, the iPadOS app requests:
+
+| Permission | Why | What Happens If Denied |
+|---|---|---|
+| **Camera** | Receive video from the HDMI capture card | No video preview |
+| **Microphone** | Monitor target PC audio through iPad speakers | No audio monitoring |
+| **Bluetooth** | Discover and connect to KVM-Go for HID input | Can't send keyboard/mouse input |
+| **Photo Library** | Save screenshots and recordings | Captures still save to app Documents folder |
+
+If you accidentally denied a permission, go to **Settings > Privacy & Security** to re-enable it.
 
 ### Verifying Connection
 

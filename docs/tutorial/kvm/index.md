@@ -8,7 +8,9 @@ This tutorial covers the **Openterface KVM series** — devices that capture the
 - **KVM-Go** — Portable KVM in a toolkit form factor
 - **uConsole KVM Extension** — Built-in KVM for the uConsole
 
-> **Platforms:** macOS, Windows, Linux (desktop apps) and **Android** (mobile app). Android-specific notes are marked throughout.
+> **Platforms:** macOS, Windows, Linux (desktop apps), **Android** (mobile app), and **iPadOS** (tablet app).
+> Android-specific and iPadOS-specific notes are marked throughout.
+> **Note:** iPadOS is **only supported on KVM-Go** — the iPadOS app connects via Bluetooth LE to the KVM-Go dongle.
 
 > Looking for **KeyMod** (keyboard & mouse emulator only)? See the [KeyMod Tutorial](../keymod/index.md).
 
@@ -35,4 +37,5 @@ This tutorial covers the **Openterface KVM series** — devices that capture the
 - [Mini-KVM Product Page](/product/minikvm/)
 - [KVM-Go Product Page](/product/kvm-go/)
 - [uConsole KVM Ext. Product Page](/product/uconsole-kvm-extension/)
+- [iPadOS App](/app/ipados/) — Download and installation guide
 - [Discord](https://discord.gg/sFTJD6a3R8) — Community support
