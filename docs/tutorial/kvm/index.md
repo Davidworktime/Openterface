@@ -8,6 +8,8 @@ This tutorial covers the **Openterface KVM series** — devices that capture the
 - **KVM-Go** — Portable KVM in a toolkit form factor
 - **uConsole KVM Extension** — Built-in KVM for the uConsole
 
+> **Platforms:** macOS, Windows, Linux (desktop apps) and **Android** (mobile app). Android-specific notes are marked throughout.
+
 > Looking for **KeyMod** (keyboard & mouse emulator only)? See the [KeyMod Tutorial](../keymod/index.md).
 
 ---

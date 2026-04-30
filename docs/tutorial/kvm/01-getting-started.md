@@ -52,7 +52,15 @@ This is what sets KVM devices apart from remote desktop software: you can contro
 | **macOS** | Openterface for macOS | [App Store](/appstore) or [DMG](app/mmacos/dmg-installation.md) |
 | **Windows** | Openterface QT | [GitHub Releases](https://github.com/TechxArtisanStudio/Openterface_QT/releases) |
 | **Linux** | Openterface QT | [Flatpak](https://flathub.org/apps/com.openterface.openterfaceQT), .deb, .rpm, AppImage |
-| **Android** | Openterface for Android | [Google Play](https://play.google.com/store/apps/details?id=com.openterface.AOS) |
+| **Android** | Openterface for Android | [Google Play](https://play.google.com/store/apps/details?id=com.openterface.AOS) or [GitHub Releases](https://github.com/TechxArtisanStudio/Openterface_Android/releases) |
+
+### Android Requirements
+
+The Android app requires:
+
+- **Android 8.0 (API 26)** or later
+- **USB OTG support** — most modern phones support it (Samsung, Google Pixel, OnePlus). Verify by connecting a USB flash drive with an OTG adapter
+- **USB OTG cable or adapter** to connect the KVM device to your phone
 
 ### macOS Permissions
 
@@ -106,6 +114,35 @@ The KVM enumerates as multiple USB devices:
 - **Serial** (CH9329 or CH32V208) — `/dev/ttyUSB*` (Linux), `COM*` (Windows), `cu.usbserial-*` (macOS)
 - **HID** — used for firmware operations
 
+### Connecting via Android Phone
+
+When using the Android app, the connection chain uses USB OTG:
+
+```
+┌──────────────┐     HDMI      ┌──────────────────┐
+│              │ ────────────▶ │   Openterface     │
+│  Target PC   │               │   KVM Device      │
+│  (screen)    │ ◀─────────── │                   │
+│              │     USB       │                   │
+└──────────────┘               └────────┬─────────┘
+                                        │
+                                   USB OTG
+                                        │
+                               ┌────────▼─────────┐
+                               │  Android Phone    │
+                               │  (Openterface)    │
+                               └──────────────────┘
+```
+
+Connection order for Android:
+
+1. **HDMI:** Connect target's HDMI output to the KVM's HDMI **input**
+2. **USB (target):** Connect target's USB port to the KVM's USB port — carries mouse/keyboard signals
+3. **USB OTG (phone):** Connect the KVM to your Android phone via USB OTG cable/adapter
+4. **Power:** Power on the KVM device (if separate power input) and the target computer
+
+When connected successfully, the video preview switches from a placeholder to the target's live screen, and tapping the phone screen moves the cursor on the target.
+
 ---
 
 ## 5. First Launch
@@ -124,6 +161,18 @@ The KVM enumerates as multiple USB devices:
 │  Status Bar │ Port │ Keys │ Mouse │ Resolution │        │
 └─────────────────────────────────────────────────────────┘
 ```
+
+### Android Permissions
+
+On first launch, the Android app requests:
+
+| Permission | Why | What Happens If Denied |
+|---|---|---|
+| **USB Host** | Communicate with the Openterface hardware | App can't detect your KVM device |
+| **Camera** | Receive video from the HDMI capture chip | No video preview |
+| **Storage** | Save screenshots and recordings | Can't save captures |
+
+Grant all permissions for full functionality. A system USB permission dialog also appears when the KVM device is detected — tap **Allow**.
 
 ### Verifying Connection
 

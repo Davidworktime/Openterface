@@ -218,3 +218,57 @@ sock.close()
 ## Next Steps
 
 - **[Troubleshooting →](04-troubleshooting.md)** — Common problems and solutions
+
+---
+
+## Android-Specific Features
+
+### Settings Panel
+
+The Android app's settings panel (Menu button ☰) contains all configuration options:
+
+| Setting | Description |
+|---|---|
+| **Device** | Shows connected USB devices and status. Tap to select or re-scan. |
+| **Disconnect Device** | Safely releases all USB connections. Use before unplugging. |
+| **Baudrate** | Serial communication speed: **115200** (default) or **9600** (slower, for issues). |
+| **Controls** | Camera brightness, contrast, and hue sliders. |
+| **Video Format** | Resolution and frame rate selector. |
+| **Rotate/Flip** | Rotate 90° CW/CCW, flip horizontally/vertically. |
+| **Screen Capture / Record Video** | Screenshot and video recording. |
+| **Relative / Absolute / Drag** | Switch mouse control mode. |
+| **About Device** | Shows Android version and app version info. |
+
+### Settings Persistence
+
+The Android app remembers your preferences between sessions:
+
+| Setting | Persisted? |
+|---|---|
+| Mouse control mode | Yes |
+| Video format (resolution, FPS) | Yes |
+| Camera parameters (brightness, contrast, hue) | Yes |
+| Keyboard layout (US, JP, DE) | Yes |
+| Baudrate | Yes |
+| Device connection history | Yes |
+
+When you reopen the app, it restores your last settings. To reset everything: Android Settings → Apps → Openterface → Storage → **Clear Data**.
+
+### Safe Disconnect
+
+Before unplugging the KVM device on Android:
+
+1. Open the settings panel
+2. Tap **Disconnect Device** (shown in red)
+3. Wait for the app to release the USB connection
+4. Unplug the cables
+
+This prevents data corruption and ensures the target computer properly releases the keyboard/mouse.
+
+### Android Performance Tips
+
+- **Lower the resolution** — 640×480 is much lighter than 1920×1080
+- **Reduce the frame rate** — 30fps uses less bandwidth than 60fps
+- **Close other apps** — free up your phone's memory
+- **Use a quality USB OTG adapter** — cheap adapters can bottleneck the connection
+- The development team is working on reducing latency in the camera pipeline itself

@@ -21,6 +21,18 @@ Mouse movements are sent as relative deltas through the HID interface. The host 
 - **Requirements:** Accessibility permission on macOS
 - **Exit:** Global keyboard shortcut (macOS) or long-press Esc (Qt)
 
+### Android Mouse Modes
+
+The Android app offers three ways to control the target mouse, switchable in the settings panel:
+
+| Mode | How It Works | Best For |
+|---|---|---|
+| **Absolute (Default)** | Tap anywhere and the cursor jumps there and left-clicks. Position maps proportionally. | Most tasks |
+| **Relative** | Drag your finger; cursor moves relative to your drag, like a laptop trackpad. Lift your finger and cursor stays put. | Fine cursor positioning |
+| **Absolute Drag** | Tap and hold; cursor jumps and follows your finger. A "Drag" label appears. Release to drop. | Dragging files, selecting text |
+
+**Mouse buttons on Android:** single tap = left-click, long press = right-click, double tap = double-click.
+
 ### Performance Presets (macOS)
 
 Under **Control > Mouse Mode > Performance Presets**:
@@ -74,6 +86,21 @@ The app sends clipboard text as emulated keystrokes to the target. Useful for us
 - **Host Paste:** Always sends to target
 - **Local Paste:** Always pastes on host
 
+### Android On-Screen Keyboard
+
+The Android app provides a full on-screen keyboard accessible via the keyboard button (⌨) at the bottom-right of the main screen:
+
+| Control | What It Does |
+|---|---|
+| **ShortCut** | Pre-built shortcuts: Ctrl+C/V, Win+L, Ctrl+Alt+Del, Alt+F4, etc. |
+| **Function** | F1–F12, PrtSc, ScrLk, navigation keys (Ins, Home, PgUp, etc.), arrows |
+| **System** | QWERTY layout with letters, numbers, punctuation, Backspace, Enter |
+| **Modifier keys** | Ctrl, Shift, Alt, Win — toggle buttons that auto-reset after the next key |
+
+To send a combination like **Ctrl+Alt+Del**: tap Ctrl (highlights), tap Alt (both highlight), tap Del. All modifiers reset automatically after the key is sent.
+
+The keyboard also supports **different regional layouts** (US, Japanese JIS, German QWERTZ, etc.) selectable in the settings panel. Zoom in/out buttons let you adjust key sizes.
+
 ---
 
 ## 3. Video Settings
@@ -124,6 +151,16 @@ Zoom in/out, reset to fit, and scroll to pan when zoomed in.
 
 Switch via **Preferences > Video > Media Backend**. Restart after changing.
 
+### Android Video Controls
+
+On the Android app, video settings are accessed via the settings panel (Menu button ☰):
+
+- **Video Format** — Select resolution (1920×1080, 1280×720, 640×480) and frame rate (30fps, 60fps). Lower resolution/frame rate if video is choppy.
+- **Controls** — Real-time sliders for **brightness**, **contrast**, and **hue**
+- **Rotate/Flip** — Rotate 90° CW/CCW, flip horizontally/vertically. Useful when the KVM device is mounted upside-down or sideways
+
+The settings persist between sessions — you only configure them once.
+
 ---
 
 ## 4. Audio from Target
@@ -163,6 +200,15 @@ Click the record button to start/stop recording the target's video and audio str
 - Output format (MP4, AVI, MOV, MKV)
 - Video bitrate, audio codec
 - Output directory
+
+### Android Screen Capture & Recording
+
+On Android, access via the settings panel:
+
+- **Screen Capture** — Tap to save a snapshot of the current video frame to your device's default media folder. Requires **Storage permission**.
+- **Record Video** — Tap to start/stop recording. A red recording indicator with timer appears at the top. Video saves to your device's default media folder.
+
+**Use cases:** record the target's boot process, capture error messages, document configuration steps.
 
 ---
 

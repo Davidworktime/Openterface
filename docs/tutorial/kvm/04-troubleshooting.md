@@ -220,6 +220,72 @@ On Pi 3 or low-memory Pi 4:
 
 ---
 
+## Android-Specific Issues
+
+### Device Not Detected
+
+**Symptom:** Video preview shows a placeholder, not the target's screen.
+
+1. **Check the USB OTG connection** — unplug and replug the cable
+2. **Verify OTG support** — try connecting a USB flash drive to confirm your phone supports OTG
+3. **Check the KVM device** — is it powered on? Are any indicator lights on?
+4. **Try a different cable** — some OTG adapters are faulty
+5. **Restart the app** — close it fully (swipe from recent apps) and reopen
+6. **Check USB permission** — if a system dialog asked for USB access, make sure you tapped **Allow**
+
+### No Video
+
+**Symptom:** Device is detected but the screen is black or frozen.
+
+1. **Check the HDMI cable** — is the target computer's HDMI firmly connected to the KVM HDMI input?
+2. **Check the target's output** — is the target computer actually displaying something?
+3. **Try a lower resolution** — open settings → **Video Format** → pick a lower resolution
+4. **Check camera permission** — Android Settings → Apps → Openterface → Permissions → ensure Camera is allowed
+5. **Restart the app**
+
+### Mouse Not Responding
+
+**Symptom:** Video works but tapping the screen does nothing on the target.
+
+1. **Check USB connection for HID** — open settings → **Device** and confirm the device is active
+2. **Try a different mouse mode** — switch from Absolute to Relative or vice versa
+3. **Disconnect and reconnect** — use the red **Disconnect Device** button, then reconnect
+4. **Check the target computer** — does it recognize a USB keyboard/mouse? Try unplugging and replugging the USB cable on the target side
+
+### Keyboard Not Sending Keys
+
+**Symptom:** Mouse works but typing does nothing.
+
+1. **Make sure the keyboard is open** — tap the keyboard button
+2. **Check the serial connection** — open settings → **Device** and confirm it's active
+3. **Check the baudrate** — open settings → **Baudrate** and make sure it matches your device (115200 is the default)
+4. **Check the keyboard layout** — make sure the correct layout (US, JP, DE) is selected
+
+### App Crashes or Freezes
+
+1. **Close and restart** the app
+2. **Lower the video resolution and frame rate** — high settings can overwhelm devices with limited memory
+3. **Check available storage** — low storage can cause instability
+4. **Update the app** — check for a newer version on Google Play or GitHub Releases
+
+### Screenshots or Recordings Not Saving
+
+1. **Check Storage permission** — Android Settings → Apps → Openterface → Permissions → Storage
+2. **Check available storage space** on your device
+3. Recordings and screenshots are saved to your device's default media folder
+
+### Collecting Logs (Android)
+
+If standard troubleshooting doesn't help, collect logs to share with maintainers:
+
+```bash
+adb logcat | grep -i openterface > openterface.log
+```
+
+Include this file when opening a GitHub issue.
+
+---
+
 ## Factory Reset
 
 1. Use the Serial Reset Tool from Settings (macOS) or Device menu (Qt)
