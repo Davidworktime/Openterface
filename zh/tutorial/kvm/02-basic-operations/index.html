@@ -5159,6 +5159,76 @@
 </tbody>
 </table>
 <p><strong>Mouse buttons on Android:</strong> single tap = left-click, long press = right-click, double tap = double-click.</p>
+<h3 id="ipados-mouse-modes">iPadOS Mouse Modes</h3>
+<p>The iPadOS app offers two mouse modes, toggleable via the mouse mode button on the toolbar:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Icon</th>
+<th>How It Works</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pan Mode</strong> (Relative)</td>
+<td>Hand icon</td>
+<td>Finger acts like a laptop trackpad — drag to move cursor, tap to click</td>
+<td>General desktop use, flat surface</td>
+</tr>
+<tr>
+<td><strong>iPencil Mode</strong> (Absolute)</td>
+<td>Pencil icon</td>
+<td>Touch position maps directly to target screen coordinates, like a drawing tablet</td>
+<td>Precise pointing, Apple Pencil use</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gestures in both modes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>Pan Mode</th>
+<th>iPencil Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single tap</strong></td>
+<td>Left-click</td>
+<td>Move cursor to point + left-click</td>
+</tr>
+<tr>
+<td><strong>Tap &amp; drag</strong></td>
+<td>Move cursor (relative)</td>
+<td>Drag with left button held</td>
+</tr>
+<tr>
+<td><strong>Double-tap</strong></td>
+<td>Double-click</td>
+<td>Double-click at point</td>
+</tr>
+<tr>
+<td><strong>Long press</strong></td>
+<td>Right-click</td>
+<td>Right-click at point</td>
+</tr>
+<tr>
+<td><strong>Two-finger tap</strong></td>
+<td>Right-click</td>
+<td>Right-click</td>
+</tr>
+<tr>
+<td><strong>Two-finger drag</strong></td>
+<td>Scroll wheel</td>
+<td>Scroll wheel</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quick Menu:</strong> Long-press on the video preview to open a menu with Left Click, Right Click, and Drag options.</p>
+<p><strong>Drag Mode:</strong> Double-tap &amp; hold or select Drag from the quick menu — the left button stays held, a "Dragging Mode Active" label appears.</p>
 <h3 id="performance-presets-macos">Performance Presets (macOS)</h3>
 <p>Under <strong>Control &gt; Mouse Mode &gt; Performance Presets</strong>:</p>
 <table>
@@ -5274,6 +5344,76 @@
 </table>
 <p>To send a combination like <strong>Ctrl+Alt+Del</strong>: tap Ctrl (highlights), tap Alt (both highlight), tap Del. All modifiers reset automatically after the key is sent.</p>
 <p>The keyboard also supports <strong>different regional layouts</strong> (US, Japanese JIS, German QWERTZ, etc.) selectable in the settings panel. Zoom in/out buttons let you adjust key sizes.</p>
+<h3 id="ipados-keyboard-input">iPadOS Keyboard Input</h3>
+<p>The iPadOS app supports two keyboard input methods:</p>
+<p><strong>Floating On-Screen Keyboard:</strong> Tap the <strong>Keyboard</strong> button in the toolbar to show a draggable floating keyboard with a Mac-style layout:</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Top</strong></td>
+<td>Esc, F1–F12, Del</td>
+</tr>
+<tr>
+<td><strong>Number</strong></td>
+<td>`, 1–0, -, =, Backspace</td>
+</tr>
+<tr>
+<td><strong>QWERTY</strong></td>
+<td>Tab, q–p, [, ], \, Enter</td>
+</tr>
+<tr>
+<td><strong>Home row</strong></td>
+<td>Caps, a–l, ;, ', Enter</td>
+</tr>
+<tr>
+<td><strong>Bottom</strong></td>
+<td>Shift, z–m, ,, ., /, Shift</td>
+</tr>
+<tr>
+<td><strong>Modifiers</strong></td>
+<td>Ctrl, Alt, Cmd, Space, Cmd, Alt, Ctrl</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Toggle modifiers:</strong> Tap Ctrl, Shift, Alt, Cmd, or Caps to toggle on/off (highlighted in blue)</li>
+<li><strong>Keyboard modes:</strong> Normal (standard typing) and Game (optimized HID packet header for game input)</li>
+<li><strong>Dragging:</strong> Grab the drag handle in the header to reposition the keyboard anywhere on screen</li>
+</ul>
+<p><strong>External iPad Keyboard:</strong> Physical keyboards connected to the iPad (Bluetooth, Smart Connector, USB) are passed through directly to the target PC. Modifier keys send as press/release events, so combinations like <code>Ctrl+C</code> or <code>Alt+Tab</code> work naturally.</p>
+<p><strong>Composite Key Shortcuts:</strong> The app includes a library of common shortcuts accessible from the toolbar, organized by category:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Navigation</strong></td>
+<td>Ctrl+C/V/X/A/F, Ctrl+Home/End, Page Up/Down</td>
+</tr>
+<tr>
+<td><strong>Editing</strong></td>
+<td>Ctrl+Z/Y, Ctrl+B/I/U, Ctrl+D</td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td>Ctrl+S/O/P/R, F11, Alt+F4</td>
+</tr>
+<tr>
+<td><strong>Application</strong></td>
+<td>Alt+Tab, Cmd+M, Cmd+Shift+3/4 (macOS screenshots)</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="3-video-settings">3. Video Settings</h2>
 <h3 id="resolution-display">Resolution Display</h3>
@@ -5388,6 +5528,15 @@
 <li><strong>Rotate/Flip</strong> — Rotate 90° CW/CCW, flip horizontally/vertically. Useful when the KVM device is mounted upside-down or sideways</li>
 </ul>
 <p>The settings persist between sessions — you only configure them once.</p>
+<h3 id="ipados-video-controls">iPadOS Video Controls</h3>
+<p>On iPadOS, video controls are accessible from the bottom toolbar:</p>
+<ul>
+<li><strong>Resolution Switching</strong> — Tap the <strong>Video</strong> button (shows current resolution) to choose from: 2160p (4K), 1080p (default), 720p, or 480p. Lower resolution for better performance on slower connections.</li>
+<li><strong>Zoom Mode</strong> — Tap <strong>Zoom</strong> to enter zoom mode, then pinch with two fingers to zoom in. A zoom indicator shows the current level (e.g., <code>2.5x</code>). When zoomed, single-finger drag pans the viewport. Tap Zoom again to exit.</li>
+<li><strong>Fullscreen</strong> — Tap <strong>Fullscreen</strong> to hide the toolbar and extend video to fill the entire screen. Tap the arrow button in the top-left to exit.</li>
+<li><strong>Screen Rotation</strong> — Tap <strong>Rotate</strong> to cycle through orientation correction modes (Normal, 90° CW, 180°, 90° CCW). Useful when the KVM-Go dongle is mounted sideways or upside-down. Rotation applies to both live preview and saved captures.</li>
+</ul>
+<p>When the camera is starting, a "Starting Camera..." loading indicator appears. If no camera is connected but permissions are granted, a guide image is shown.</p>
 <hr>
 <h2 id="4-audio-from-target">4. Audio from Target</h2>
 <p>The HDMI capture chip extracts audio from the HDMI signal and presents it as a USB audio input to the host.</p>
@@ -5403,6 +5552,15 @@
 <ul>
 <li><strong>Target side:</strong> Adjust on the target computer</li>
 <li><strong>Host side:</strong> Use your host OS audio mixer for the capture device</li>
+</ul>
+<h3 id="ipados-audio-monitoring">iPadOS Audio Monitoring</h3>
+<p>The iPadOS app lets you listen to the target PC's audio through your iPad's speakers or headphones:</p>
+<ul>
+<li>Tap the <strong>Audio</strong> button (speaker icon) in the toolbar to toggle monitoring</li>
+<li><strong>Icon states:</strong> gray slashed speaker = not authorized, red slashed speaker = off, green speaker with waves = on</li>
+<li>On first use, the app requests microphone permission</li>
+<li>Audio plays through iPad speakers or connected headphones/Bluetooth audio</li>
+<li><strong>During recording:</strong> monitoring audio is temporarily muted to prevent feedback, but audio is still captured into the recording file</li>
 </ul>
 <hr>
 <h2 id="5-screen-capture-recording">5. Screen Capture &amp; Recording</h2>
@@ -5423,6 +5581,40 @@
 <li><strong>Screen Capture</strong> — Tap to save a snapshot of the current video frame to your device's default media folder. Requires <strong>Storage permission</strong>.</li>
 <li><strong>Record Video</strong> — Tap to start/stop recording. A red recording indicator with timer appears at the top. Video saves to your device's default media folder.</li>
 </ul>
+<p><strong>Use cases:</strong> record the target's boot process, capture error messages, document configuration steps.</p>
+<h3 id="ipados-screen-capture-recording">iPadOS Screen Capture &amp; Recording</h3>
+<p><strong>Screenshots:</strong> Tap the <strong>Screenshot</strong> button (camera icon) in the toolbar. The app captures a high-resolution frame, corrects for orientation, and saves as JPEG.</p>
+<p><strong>Video Recording:</strong> Tap the <strong>Record</strong> button to start/stop. After stopping, the app displays the recording details (duration and file size).</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Video codec</strong></td>
+<td>H.264 at 30 fps</td>
+</tr>
+<tr>
+<td><strong>Resolution</strong></td>
+<td>Matches capture device (typically 1920×1080)</td>
+</tr>
+<tr>
+<td><strong>Audio codec</strong></td>
+<td>AAC at 128 kbps, 48 kHz, stereo</td>
+</tr>
+<tr>
+<td><strong>Container</strong></td>
+<td>MOV</td>
+</tr>
+</tbody>
+</table>
+<p><strong>File locations:</strong>
+- <strong>App Documents:</strong> <code>Documents/Recordings/</code> — browse via Files app &gt; On My iPad &gt; Openterface KVM &gt; Recordings
+- <strong>Photos App:</strong> If Photo Library permission is granted and enabled in settings
+- <strong>File naming:</strong> <code>Openterface_YYYY-MM-DD_HH-mm-ss.jpg</code> (screenshots) or <code>.mov</code> (recordings)</p>
 <p><strong>Use cases:</strong> record the target's boot process, capture error messages, document configuration steps.</p>
 <hr>
 <h2 id="6-connection-indicators">6. Connection Indicators</h2>
@@ -5492,7 +5684,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 00:56:56 UTC"><span class="timeago" datetime="2026-04-30T00:56:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 00:56:56 UTC">2026-04-30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 08:32:53 UTC"><span class="timeago" datetime="2026-04-30T08:32:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 08:32:53 UTC">2026-04-30</span>
   </span>
 
     

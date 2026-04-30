@@ -3985,6 +3985,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ipados-specific-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iPadOS-Specific Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5372,6 +5383,73 @@
 <p><strong>Security:</strong> No authentication, encryption, or rate limiting. Only enable on trusted networks.</p>
 </blockquote>
 <hr>
+<h2 id="ipados-specific-features">iPadOS-Specific Features</h2>
+<h3 id="bluetooth-connection-management">Bluetooth Connection Management</h3>
+<p>The iPadOS app connects to the KVM-Go dongle via <strong>Bluetooth Low Energy (BLE)</strong> for keyboard/mouse HID input:</p>
+<ul>
+<li><strong>Auto-connect:</strong> Enabled by default. On startup, the app scans for 5 seconds and auto-connects to the <code>kvm*</code> device with the strongest signal.</li>
+<li><strong>Reconnection:</strong> If the connection drops, the app attempts to reconnect up to 3 times with a 2-second delay.</li>
+<li><strong>Signal monitoring:</strong> RSSI updates every 2 seconds. The BLE button shows the signal strength (e.g., <code>-45 dBm</code>) with a color indicator: green (-50 to 0 dBm), orange (-70 to -50 dBm), red (below -70 dBm).</li>
+<li><strong>Device scanning:</strong> Only devices whose name starts with <code>kvm</code> (case-insensitive) appear in the list.</li>
+<li><strong>Manual control:</strong> Open the BLE screen to scan, connect, disconnect, or disable auto-connect.</li>
+</ul>
+<h3 id="info-overlay">Info Overlay</h3>
+<p>Tap the <strong>Info</strong> button to display a real-time input status overlay in the top-right corner:</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos=" 1 "></span></a>┌─ Input Status ────────┐
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos=" 2 "></span></a>│ Mouse                 │
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos=" 3 "></span></a>│ Mode: Absolute        │
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos=" 4 "></span></a>│ Position: 512.0, 384.0│
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos=" 5 "></span></a>│ Drag Mode: Active     │
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos=" 6 "></span></a>│ Scrolling: Inactive   │
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos=" 7 "></span></a>│ Keyboard              │
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos=" 8 "></span></a>│ Mode: Normal          │
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos=" 9 "></span></a>│ Caps Lock: OFF        │
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><a href="#__codelineno-2-10"><span class="linenos" data-linenos="10 "></span></a>│ Modifiers: Ctrl, Shift│
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a>└───────────────────────┘
+</span></code></pre></div>
+<p>The overlay is transparent to touches — it doesn't block interaction with the video preview.</p>
+<h3 id="screen-orientation-correction">Screen Orientation Correction</h3>
+<p>Tap the <strong>Rotate</strong> button to cycle through orientation correction modes: Normal, 90° CW, 180°, 90° CCW. This corrects the video preview when the KVM-Go dongle is mounted in a non-standard orientation. Rotation applies to both live preview and saved captures.</p>
+<h3 id="idle-timer-disabled">Idle Timer Disabled</h3>
+<p>The app keeps the iPad screen <strong>awake</strong> during use by disabling the idle timer, preventing the iPad from auto-locking while monitoring the target PC.</p>
+<h3 id="logging-system">Logging System</h3>
+<p>The app includes a built-in <code>Logger</code> with category-based filtering:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bluetooth</code></td>
+<td>BLE scanning, connection, data transmission</td>
+</tr>
+<tr>
+<td><code>mouse</code></td>
+<td>Mouse input, gesture detection, mode changes</td>
+</tr>
+<tr>
+<td><code>keyboard</code></td>
+<td>Key events, modifier state, composite keys</td>
+</tr>
+<tr>
+<td><code>camera</code></td>
+<td>Video recording, screenshots, photo capture</td>
+</tr>
+<tr>
+<td><code>ui</code></td>
+<td>Touch handling, gesture recognition, preview layer</td>
+</tr>
+<tr>
+<td><code>general</code></td>
+<td>App lifecycle, general info</td>
+</tr>
+</tbody>
+</table>
+<p>Logging can be adjusted in the app source to reduce console noise.</p>
+<hr>
 <h2 id="next-steps">Next Steps</h2>
 <ul>
 <li><strong><a href="../04-troubleshooting/">Troubleshooting →</a></strong> — Common problems and solutions</li>
@@ -5502,7 +5580,7 @@
     <span class="md-icon" title="Ultimo aggiornamento">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 00:56:56 UTC"><span class="timeago" datetime="2026-04-30T00:56:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 00:56:56 UTC">2026-04-30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 08:32:53 UTC"><span class="timeago" datetime="2026-04-30T08:32:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 08:32:53 UTC">2026-04-30</span>
   </span>
 
     

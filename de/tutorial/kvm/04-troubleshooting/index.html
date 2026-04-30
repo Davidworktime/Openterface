@@ -4022,6 +4022,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ipados-specific-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iPadOS-Specific Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#factory-reset" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5406,6 +5417,67 @@
 </span></code></pre></div>
 <p>Include this file when opening a GitHub issue.</p>
 <hr>
+<h2 id="ipados-specific-issues">iPadOS-Specific Issues</h2>
+<blockquote>
+<p><strong>Note:</strong> iPadOS is only supported on <strong>KVM-Go</strong>. If you're using Mini-KVM or uConsole KVM Extension, the iPadOS app will not work.</p>
+</blockquote>
+<h3 id="bluetooth-not-connecting">Bluetooth Not Connecting</h3>
+<p><strong>Symptom:</strong> BLE button doesn't turn green, or no devices appear in the scan list.</p>
+<ol>
+<li><strong>Check Bluetooth is enabled</strong> on your iPad — Settings &gt; Bluetooth</li>
+<li><strong>Ensure KVM-Go is powered on</strong> — the dongle should be plugged into the target PC's USB port</li>
+<li><strong>Bring the iPad closer</strong> to the KVM-Go dongle — BLE range is typically up to 10 meters</li>
+<li><strong>Check iPad Bluetooth permission</strong> — Settings &gt; Privacy &amp; Security &gt; Bluetooth &gt; ensure Openterface is allowed</li>
+<li><strong>Tap Refresh</strong> in the BLE screen to restart the scan</li>
+<li><strong>Check the Openterface app Bluetooth permission</strong> — if denied on first launch, re-enable in Settings</li>
+</ol>
+<h3 id="no-video-preview">No Video Preview</h3>
+<p><strong>Symptom:</strong> BLE is connected but the screen is black or shows a guide image.</p>
+<ol>
+<li><strong>Check HDMI connection</strong> — is the target PC's HDMI output firmly connected to the KVM-Go HDMI input?</li>
+<li><strong>Check the target's output</strong> — is the target computer actually displaying something?</li>
+<li><strong>Try a lower resolution</strong> — tap the Video button and select a lower resolution (720p or 480p)</li>
+<li><strong>Check camera permission</strong> — Settings &gt; Privacy &amp; Security &gt; Camera &gt; ensure Openterface is allowed</li>
+<li><strong>Restart the app</strong> — swipe up from recent apps and reopen</li>
+</ol>
+<h3 id="mousetouch-not-responding">Mouse/Touch Not Responding</h3>
+<p><strong>Symptom:</strong> Video works but tapping the screen does nothing on the target.</p>
+<ol>
+<li><strong>Check BLE connection</strong> — the BLE button should be green with an RSSI value</li>
+<li><strong>Try a different mouse mode</strong> — toggle between Pan Mode and iPencil Mode</li>
+<li><strong>Disconnect and reconnect</strong> — open the BLE screen, tap Disconnect, then Connect again</li>
+<li><strong>Check the target computer</strong> — does it recognize the KVM-Go as a USB keyboard/mouse?</li>
+</ol>
+<h3 id="keyboard-not-sending-keys_1">Keyboard Not Sending Keys</h3>
+<p><strong>Symptom:</strong> Mouse works but typing does nothing.</p>
+<ol>
+<li><strong>Make sure the floating keyboard is open</strong> — tap the Keyboard button</li>
+<li><strong>Check BLE connection</strong> — input goes through Bluetooth, not USB</li>
+<li><strong>Check keyboard mode</strong> — try switching between Normal and Game mode</li>
+<li><strong>External keyboard:</strong> if using a physical iPad keyboard, check that iPadOS is routing key events to the app</li>
+</ol>
+<h3 id="audio-not-playing_1">Audio Not Playing</h3>
+<p><strong>Symptom:</strong> Video works but you can't hear the target PC through the iPad.</p>
+<ol>
+<li><strong>Check the Audio button</strong> — it should show a green speaker icon</li>
+<li><strong>Check microphone permission</strong> — Settings &gt; Privacy &amp; Security &gt; Microphone &gt; ensure Openterface is allowed</li>
+<li><strong>Check iPad volume</strong> — make sure the iPad isn't muted or at minimum volume</li>
+<li><strong>Check target audio output</strong> — is the target PC configured to send audio over HDMI?</li>
+</ol>
+<h3 id="app-crashes-or-freezes_1">App Crashes or Freezes</h3>
+<ol>
+<li><strong>Close and restart</strong> the app</li>
+<li><strong>Lower the video resolution</strong> — high resolution can strain older iPads</li>
+<li><strong>Check available storage</strong> — low storage can cause instability</li>
+<li><strong>Update the app</strong> — check the App Store for a newer version</li>
+</ol>
+<h3 id="screenshots-or-recordings-not-saving_1">Screenshots or Recordings Not Saving</h3>
+<ol>
+<li><strong>Check Photo Library permission</strong> — Settings &gt; Privacy &amp; Security &gt; Photos &gt; ensure Openterface is allowed</li>
+<li><strong>Check available storage</strong> on your iPad</li>
+<li><strong>Browse via Files app</strong> — recordings save to <code>Documents/Recordings/</code> even without Photo Library access</li>
+</ol>
+<hr>
 <h2 id="factory-reset">Factory Reset</h2>
 <ol>
 <li>Use the Serial Reset Tool from Settings (macOS) or Device menu (Qt)</li>
@@ -5414,10 +5486,11 @@
 </ol>
 <h2 id="connection-recovery">Connection Recovery</h2>
 <p>The applications handle automatic recovery for:
-- Device disconnect/reconnect (hot-plug)
+- Device disconnect/reconnect (hot-plug for USB, BLE reconnection for iPadOS)
 - Communication timeouts
 - Chipset fallbacks (MS2109 → MS2109S → MS2130S)
-- Serial port recovery</p>
+- Serial port recovery
+- iPadOS BLE auto-reconnect (up to 3 attempts with 2-second delay)</p>
 <h2 id="submitting-defect-reports">Submitting Defect Reports</h2>
 <ol>
 <li>Enable log file logging</li>
@@ -5446,7 +5519,7 @@
     <span class="md-icon" title="Letztes Update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 00:56:56 UTC"><span class="timeago" datetime="2026-04-30T00:56:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 00:56:56 UTC">2026-04-30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 08:32:53 UTC"><span class="timeago" datetime="2026-04-30T08:32:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 08:32:53 UTC">2026-04-30</span>
   </span>
 
     
