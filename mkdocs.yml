@@ -326,7 +326,7 @@ nav:
     - Basic Operations: tutorial/kvm/02-basic-operations.md
     - Advanced Features: tutorial/kvm/03-advanced-features.md
     - Troubleshooting: tutorial/kvm/04-troubleshooting.md
-  KeyMod:
+  - KeyMod:
     - Overview: tutorial/keymod/index.md
     - Getting Started: tutorial/keymod/01-getting-started.md
     - Keyboard & Mouse: tutorial/keymod/02-keyboard-mouse.md
