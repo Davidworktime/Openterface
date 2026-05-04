@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="对 Openterface MiniKVM 键盘和鼠标间歇性失灵问题的透明根因分析，解释 CH213K 理想二极管差异、为何常规 QA 未发现、以及我们如何修复并防止复发。">
+        <meta name="description" content="对 Openterface MiniKVM 键盘与鼠标间歇性问题的透明根因分析：CH213K 理想二极管批次差异、为何常规 QA 仍能通过，以及已实施的修复与后续预防措施。">
       
       
         <meta name="author" content="Openterface">
@@ -382,7 +382,7 @@
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="Openterface MiniKVM 键盘与鼠标无法工作问题根因分析 - Openterface | 连接接口，开启无限可能">
-<meta property="og:description" content="对 Openterface MiniKVM 键盘和鼠标间歇性失灵问题的透明根因分析，解释 CH213K 理想二极管差异、为何常规 QA 未发现、以及我们如何修复并防止复发。">
+<meta property="og:description" content="对 Openterface MiniKVM 键盘与鼠标间歇性问题的透明根因分析：CH213K 理想二极管批次差异、为何常规 QA 仍能通过，以及已实施的修复与后续预防措施。">
 <meta property="og:image" content="https://openterface.com/assets/images/social/zh/product/minikvm/updates/260128-keyboard-mouse-issue-analysis.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
@@ -390,7 +390,7 @@
 <meta property="og:url" content="https://openterface.com/zh/product/minikvm/updates/260128-keyboard-mouse-issue-analysis/">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content="Openterface MiniKVM 键盘与鼠标无法工作问题根因分析 - Openterface | 连接接口，开启无限可能">
-<meta property="twitter:description" content="对 Openterface MiniKVM 键盘和鼠标间歇性失灵问题的透明根因分析，解释 CH213K 理想二极管差异、为何常规 QA 未发现、以及我们如何修复并防止复发。">
+<meta property="twitter:description" content="对 Openterface MiniKVM 键盘与鼠标间歇性问题的透明根因分析：CH213K 理想二极管批次差异、为何常规 QA 仍能通过，以及已实施的修复与后续预防措施。">
 <meta property="twitter:image" content="https://openterface.com/assets/images/social/zh/product/minikvm/updates/260128-keyboard-mouse-issue-analysis.png">
 
   
@@ -782,43 +782,10 @@
               
             
               
-                <!-- Child with children - show the child title and link to its first child -->
-                
-                
-                  <a href="../../../../app/qt/" class="dropdown-item">
-                    Windows 与 Linux
-                  </a>
-                
-              
-            
-              
-                <!-- Child with children - show the child title and link to its first child -->
-                
-                
-                  <a href="../../../../app/macos/" class="dropdown-item">
-                    macOS
-                  </a>
-                
-              
-            
-              
-                <!-- Child with children - show the child title and link to its first child -->
-                
-                
-                  <a href="../../../../app/android/" class="dropdown-item">
-                    Android
-                  </a>
-                
-              
-            
-              
-                <!-- Child with children - show the child title and link to its first child -->
-                
-                
-                  <a href="../../../../app/updates/" class="dropdown-item">
-                    Updates
-                  </a>
-                
+                <!-- Direct child with URL -->
+                <a href="../../../../app/updates/" class="dropdown-item">
+                  Updates
+                </a>
               
             
               
@@ -3182,11 +3149,7 @@
         
       
         
-      
-        
-      
-        
-      
+          
         
       
         
@@ -3205,8 +3168,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../app/updates/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -3220,8 +3184,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
@@ -3262,311 +3232,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../app/qt/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Windows 与 Linux
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Windows 与 Linux
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../app/macos/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    macOS
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    macOS
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../app/macos/dmg-installation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DMG 安装
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../app/android/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Android
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Android
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../app/updates/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Updates
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Updates
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
               
             
               
@@ -5062,7 +4727,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年1月28日 06:50:43 UTC"><span class="timeago" datetime="2026-01-28T06:50:43+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年1月28日 06:50:43 UTC">2026-01-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月4日 07:45:38 UTC"><span class="timeago" datetime="2026-05-04T07:45:38+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月4日 07:45:38 UTC">2026-05-04</span>
   </span>
 
     
