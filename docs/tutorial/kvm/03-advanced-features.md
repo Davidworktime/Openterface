@@ -40,21 +40,18 @@
 
 EDID (Extended Display Identification Data) is what the KVM device sends to the target to describe its display capabilities — supported resolutions, refresh rates, vendor info. The KVM acts as a "fake monitor," so EDID determines what resolutions the target will output.
 
-### Editing EDID
+### Editing EDID Display Name
 
-You can:
-1. View the current EDID data
-2. Edit supported resolutions
-3. Add custom resolution entries
-4. Flash the updated EDID to the device's firmware
+You can change the display name that the KVM device reports to the target. This name appears in the target OS display settings.
+
+> **Note:** Only editing the display name is currently supported. Resolution editing and custom resolution entries are not yet available.
 
 **Access:** Settings > EDID Display Name Editor (macOS) or Device > Update Display Settings (Qt)
 
 ### Use Cases
 
 - **Identifying the display** in target OS settings
-- **Forcing specific resolution profiles** — some OSes use display name to select defaults
-- **Custom naming** in multi-monitor setups
+- **Custom naming** in multi-monitor setups to distinguish the KVM display
 
 ---
 

@@ -179,7 +179,6 @@ The toolbar shows the current input resolution and FPS from the target. The reso
 ### Changing Resolution
 
 1. Configure the preferred resolution in video settings
-2. Or use EDID settings to push custom resolution values to the target
 
 ### Aspect Ratio & Scaling
 
