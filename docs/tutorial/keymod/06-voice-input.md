@@ -19,12 +19,13 @@ Convert your speech into keystrokes sent to the target computer — hands-free t
 
 | Engine | How it works | Setup |
 |---|---|---|
-| **System Recognizer** (Android) / **Apple Speech** (iOS) | Uses built-in speech recognition | Requires Google Voice Typing (Android) or network connectivity (iOS) |
-| **Whisper** (both) | On-device or cloud AI transcription | Android: set API key in Settings. iOS: download on-device model files |
+| **System Recognizer** | Uses Android's built-in speech recognition | Requires Google Voice Typing |
+| **Whisper** | On-device or cloud AI transcription | Set API key in Settings > Voice Input |
 
-## Supported Languages (iOS)
-
-15 languages including English (US/UK), Chinese (Simplified/Traditional), Cantonese, Japanese, Korean, French, German, Spanish, Italian, Portuguese, Russian, Arabic, and Hindi.
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-voice-input.webp" alt="Voice input screen" width="300" />
+  <p><em>Voice input — transcript area, targets, history, and mic. Configure API key in Settings > Voice Input.</em></p>
+</div>
 
 ## Silence Detection & Auto-Pause
 
@@ -46,26 +47,7 @@ Both engines feature automatic silence detection that pauses recording when you 
 | **Auto Line Return** | Append an Enter keystroke after sending |
 | **AI Refine** | Send transcribed text to AI for improvement |
 
-## Whisper Model Management (iOS)
-
-On-device Whisper models trade accuracy for file size:
-
-| Model | Size | Accuracy | Speed |
-|---|---|---|---|
-| **tiny** | ~75 MB | Basic | Fastest |
-| **base** | ~142 MB | Good | Fast |
-| **small** | ~466 MB | Better | Moderate |
-| **medium** | ~1.5 GB | Best | Slowest |
-
-Start with `base` — it's a good balance of accuracy and speed.
-
-If model downloads fail or stall, check network connectivity and available storage. Try a smaller model first (tiny or base).
-
-## Permissions (iOS)
-
-Voice Input requires **Microphone** and **Speech Recognition** permissions. If denied, enable them in Settings → Privacy & Security.
-
-## Voice Text Not Sending (Android)
+## Voice Text Not Sending
 
 Check the connection status. The "Send" button is disabled when not connected.
 
