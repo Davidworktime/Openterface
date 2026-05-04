@@ -1,8 +1,8 @@
 ---
 draft: false
 date: 2026-01-28
-description: "对 Openterface MiniKVM 键盘和鼠标间歇性失灵问题的透明根因分析，解释 CH213K 理想二极管差异、为何常规 QA 未发现、以及我们如何修复并防止复发。"
-keywords: "mini-kvm, openterface, kvm-over-usb, 根因分析, CH213K-理想二极管, USB-电源-稳定性, 理想二极管-差异, 键盘-鼠标-故障, 硬件修复, QA-改进"
+description: "对 Openterface MiniKVM 键盘与鼠标间歇性问题的透明根因分析：CH213K 理想二极管批次差异、为何常规 QA 仍能通过，以及已实施的修复与后续预防措施。"
+keywords: "mini-kvm, openterface, kvm-over-usb, 根因分析, CH213K-理想二极管, USB-供电-稳定性, 理想二极管-批次差异, 键盘-鼠标-故障, 硬件修复, QA-改进"
 ---
 
 # Openterface MiniKVM 键盘与鼠标无法工作问题根因分析
