@@ -211,7 +211,11 @@ plugins:
       product/kvm-go/reviews/testimonials.md: product/kvm-go/reviews/index.md
       product/kvm-go/reviews/media.md: product/kvm-go/reviews/index.md
       product/keymod/reviews/testimonials.md: product/keymod/reviews/index.md
-      product/keymod/reviews/media.md: product/keymod/reviews/index.md
+       product/keymod/reviews/media.md: product/keymod/reviews/index.md
+       app/qt.md: app/overview.md
+       app/macos.md: app/overview.md
+       app/macos/dmg-installation.md: app/overview.md
+       app/android.md: app/overview.md
       buy-mini-kvm.md: https://www.crowdsupply.com/techxartisan/openterface-mini-kvm
       order.md: https://www.crowdsupply.com/techxartisan/openterface-mini-kvm
       shop.md: https://shop.techxartisan.com
@@ -309,15 +313,7 @@ nav:
     - Toolkit Bag: product/accessories/openterface-toolkit-bag.md
 - App:
   - Overview: app/overview.md
-  - Win & Linux:
-    - Overview: app/qt/index.md
-  - MacOS:
-    - Overview: app/macos/index.md
-    - DMG Installation: app/macos/dmg-installation.md
-  - Android:
-    - Overview: app/android/index.md
-  - Updates:
-    - Updates: app/updates/index.md
+  - Updates: app/updates/index.md
   - FAQs: app/faq.md
 - Tutorial:
   - KVM Series:
