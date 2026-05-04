@@ -82,8 +82,8 @@ Transform your phone or tablet into a **universal input device** for any compute
 
     KeyMod controller app for iPhone and iPad. Connect via Bluetooth LE or USB-C.
 
-    [:octicons-arrow-right-24: Install from App Store](/appstore-keymod) <br>
-    [:octicons-mark-github-16: Openterface_KeyMod_iOS](https://github.com/TechxArtisanStudio/Openterface_KeyMod_iOS)
+    :octicons-arrow-right-24: Install from App Store *(coming soon)* <br>
+    :octicons-mark-github-16: Openterface_KeyMod_iOS *(coming soon)*
 
 </div>
 
