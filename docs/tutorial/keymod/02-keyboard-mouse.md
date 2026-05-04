@@ -11,28 +11,25 @@ The Keyboard & Mouse mode is the most frequently used mode. It provides a virtua
 ## The Layout
 
 **Portrait mode:**
-```
-+-------------------------------------------+
-| [Ctrl] [Alt] [Win] [Shift] [Fn] [Tab] ... |  ← Modifier row
-| [Q] [W] [E] [R] [T] [Y] [U] [I] [O] [P]  |  ← QWERTY layout
-| [A] [S] [D] [F] [G] [H] [J] [K] [L]      |
-| [Z] [X] [C] [V] [B] [N] [M]              |
-| [?123] [  Space  ] [Enter] [Backspace]    |  ← Bottom row
-+-------------------------------------------+
-|  TouchPad area                            |  ← TouchPad (below keyboard)
-|  (tap, drag, scroll)                      |
-+-------------------------------------------+
-```
 
-**Landscape mode — Split layout (Android):**
-```
-+--------------------+--+--------------------+
-| [Q] [W] [E] [R]... |  | ...[U] [I] [O] [P] |
-| [A] [S] [D] [F]... |  | ...[J] [K] [L]     |  ← Two keyboard halves
-| [Z] [X] [C] [V]... |  | ...[N] [M]         |     (left + right)
-| [TouchPad]         |  |                    |
-+--------------------+--+--------------------+
-```
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-keyboard-mouse-portrait-touchpad-gestures.webp" alt="Portrait touchpad gesture help and keyboard" width="300" />
+  <p><em>Portrait — touchpad gestures + keyboard layout. Swipe up/down on the touchpad to scroll, drag to move the cursor.</em></p>
+</div>
+
+**Landscape — split keyboard + touchpad:**
+
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-keyboard-mouse-landscape-split-keyboard-touchpad.webp" alt="Landscape split keyboard and central touchpad" width="420" />
+  <p><em>Landscape — split keyboard halves with touchpad on the left side for comfortable two-thumb typing.</em></p>
+</div>
+
+**Landscape — macro row + profiles:**
+
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-keyboard-mouse-landscape-macro-strip.webp" alt="Landscape macro strip and profile selector" width="420" />
+  <p><em>Landscape — macro strip above the keyboard and profile selector (e.g. Default, KiCAD).</em></p>
+</div>
 
 ## Display Modes (Android)
 
@@ -59,12 +56,9 @@ Tap the **toggle handle** (pill-shaped divider between keyboard and touchpad) to
 
 ### Modifier Behavior
 
-Modifiers work differently on Android vs iOS:
+**Hold-and-tap:** Tap a modifier to hold it (it highlights), then tap any key. The modifier releases automatically after one key press. For multi-modifier combos, tap each modifier in sequence before tapping the final key.
 
-- **Android — Hold-and-tap:** Tap a modifier to hold it (it highlights), then tap any key. The modifier releases automatically after one key press. For multi-modifier combos, tap each modifier in sequence before tapping the final key.
-- **iOS — Toggle:** Tap a modifier to activate it (shown as a badge in the sidebar). Tap again to deactivate. Active modifiers apply to all subsequent key presses.
-
-### Long-Press Alternates (Android)
+### Long-Press Alternates
 
 Many letter keys have **hidden symbols** you can access by pressing and holding:
 
@@ -84,10 +78,6 @@ Tap the **Fn** key in the modifier row. The letter keys temporarily become **F1 
 - Q = F1, W = F2, E = F3, R = F4, T = F5, Y = F6
 - U = F7, I = F8, O = F9, P = F10
 - A = F11, S = F12
-
-### Caps Lock (iOS)
-
-On iOS, tap the **Caps** key to toggle Caps Lock. A green **CAPS** badge appears in the sidebar when active.
 
 ## Quick-Action Buttons
 
@@ -130,6 +120,11 @@ Common shortcut buttons are available for quick access. The app uses the **Targe
 - **TouchPad Help overlay** (Android) — Tap the **?** icon to see a full-screen gesture reference guide
 - **Haptic feedback** — You'll feel a vibration on clicks and drag toggles
 
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-keyboard-mouse-portrait-touchpad-numpad.webp" alt="Portrait touchpad and keypad grid" width="300" />
+  <p><em>Portrait — touchpad with keypad grid on the right for quick number/symbol entry.</em></p>
+</div>
+
 ## Text Input (IME Compose Mode — Android)
 
 In portrait Keyboard & Mouse mode, you can switch to **IME capture mode** — a text editor below the keyboard where you compose longer text before sending it as HID keystrokes to the target computer.
@@ -138,13 +133,14 @@ In portrait Keyboard & Mouse mode, you can switch to **IME capture mode** — a 
 - In compose mode, you get a text editor with a toolbar for copy, paste, clear, undo, and send
 - **Collapse/expand** the compose area with the arrow icon
 
-## Clipboard Integration (iOS)
-
-On iOS, KeyMod automatically monitors the clipboard for changes. When you copy text on your iOS device, a prompt overlay appears — tap **Send** to transmit the clipboard content as keystrokes to the target, or **Dismiss** to ignore it.
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-keyboard-mouse-portrait-long-text-compose.webp" alt="Portrait long text compose and Send" width="300" />
+  <p><em>IME compose mode — type or paste long text, then tap Send to deliver it as HID keystrokes to the target.</em></p>
+</div>
 
 ## Target OS
 
-Set the target OS to match the target computer's key conventions. This affects shortcut labels, Unicode input methods, and modifier key mapping. Change it by tapping the **OS icon** in the header bar (Android) or using the segmented picker in the sidebar (iOS).
+Set the target OS to match the target computer's key conventions. This affects shortcut labels, Unicode input methods, and modifier key mapping. Change it by tapping the **OS icon** in the header bar.
 
 ## Shortcut Strip (Android, Landscape)
 

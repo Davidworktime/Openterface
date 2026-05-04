@@ -1,6 +1,6 @@
 ---
 title: "KeyMod Tutorial - Gamepad"
-description: "Use KeyMod as a virtual game controller with customizable layouts for Xbox, PlayStation, and NES-style gamepads."
+description: "Use KeyMod as a virtual game controller with customizable layouts for gaming, retro emulation, and game testing."
 keywords: "KeyMod gamepad, virtual controller, game controller, WASD mapping, analog stick"
 ---
 
@@ -10,21 +10,7 @@ Transform your phone into a virtual game controller for gaming, retro emulation,
 
 ## The Layout
 
-```
-+-----------------------------------+
-| [L1]              [R1]           |
-| [L2]              [R2]           |
-|                                   |
-|  [D-pad]          [A][B]         |
-|  ▲                [X][Y]         |
-| ◀ ▶                             |
-|  ▼                              |
-|             [Select] [Start]     |
-|      [Left Stick]  [Right Stick] |
-+-----------------------------------+
-```
-
-## Controls
+The gamepad provides a full controller layout with D-pad, action buttons, shoulder buttons, analog sticks, and Start/Select.
 
 | Control | How |
 |---|---|
@@ -34,23 +20,7 @@ Transform your phone into a virtual game controller for gaming, retro emulation,
 | Analog sticks | Touch and drag the stick circles |
 | Start / Select | Tap the buttons |
 
-## Customizing (iOS)
-
-iOS supports three built-in controller layouts selectable from the top bar:
-
-- **Xbox** — Standard Xbox-style with dual sticks, D-pad, A/B/X/Y, shoulder/trigger buttons
-- **PlayStation** — PlayStation-style with Cross/Circle/Square/Triangle action buttons
-- **NES** — Classic Nintendo Entertainment System (D-pad, A/B, Select/Start, no sticks)
-
-### Analog Sticks (iOS)
-
-- **Left stick → Keyboard keys:** Maps to arrow keys with diagonal support. Configurable to WASD in Edit Mode.
-- **Right stick → Mouse movement:** Dynamic sensitivity (2.0–8.0), dead zone to prevent drift.
-- **Hysteresis:** Activation (0.6) and deactivation (0.4) thresholds prevent key chatter at the boundary.
-
-> **Note:** Gamepad HID protocol is under active development. Basic button support works; analog stick precision may vary.
-
-## Customizing (Android)
+## Customizing
 
 - **Long-press any button or stick** to reconfigure it — assign any HID key to each component
 - **Analog vs Key mode** — sticks can be configured as analog input or as key-mapped D-pad input
@@ -58,6 +28,14 @@ iOS supports three built-in controller layouts selectable from the top bar:
 - **Button/stick size scaling** — adjust sizes for your preferred touch area
 - **Background image** — customize the gamepad background
 - **Haptic feedback** — vibration on button press
+
+### Analog Sticks
+
+- **Left stick → Keyboard keys:** Maps to arrow keys with diagonal support. Configurable to WASD in Edit Mode.
+- **Right stick → Mouse movement:** Dynamic sensitivity (2.0–8.0), dead zone to prevent drift.
+- **Hysteresis:** Activation (0.6) and deactivation (0.4) thresholds prevent key chatter at the boundary.
+
+> **Note:** Gamepad HID protocol is under active development. Basic button support works; analog stick precision may vary.
 
 ## Troubleshooting
 

@@ -27,7 +27,7 @@ A macro is a **recorded sequence of keystrokes** that you can replay. For exampl
 | `<LEFT>`, `<RIGHT>`, `<UP>`, `<DOWN>` | Arrow keys |
 | `<HOME>`, `<END>`, `<TAB>`, `<DEL>` | Navigation keys |
 | `<F1>` through `<F12>` | Function keys |
-| `<DELAY1S>`, `<DELAY2S>`, `<DELAY5S>`, `<DELAY10S>` | Pauses (iOS also supports `<DELAY500MS>`) |
+| `<DELAY1S>`, `<DELAY2S>`, `<DELAY5S>`, `<DELAY10S>` | Pauses |
 
 **Example:**
 ```
@@ -43,14 +43,6 @@ This opens a terminal (Ctrl+Alt+T), waits 1 second, then types `ls -la` and pres
 4. Build the macro command sequence using the text field and quick-insert token chips
 5. Adjust the **Send Char Interval** (delay between keystrokes in milliseconds)
 6. Tap **"Save"**
-
-## Scheduling & Repeating (iOS)
-
-Macros can be scheduled to run at a specific date/time with repeat count and interval. The app must be running for scheduled macros to fire.
-
-## Sub-Macro References (iOS)
-
-Invoke other macros by name using `<Macro>label</Macro>`. Macros can nest up to 10 levels deep.
 
 ## Next Steps
 

@@ -29,10 +29,10 @@ După succesul **Openterface Mini-KVM**, cu peste 5.000 de utilizatori în comun
 
 <div style="text-align: center; margin: 20px 0 10px 0;">
   <div class="carousel-funding-stats" style="display: inline-flex; justify-content: center;">
-    <span class="funding-amount">$88,253</span>
+    <span class="funding-amount">$101,548</span>
     <span class="funding-text">Finanțat pe 30 dec 2025</span>
     <span class="funding-separator">|</span>
-    <span class="funding-backers"><span class="funding-backers-count">374</span> <span>Susținători</span></span>
+    <span class="funding-backers"><span class="funding-backers-count">478</span> <span>Susținători</span></span>
   </div>
 </div>
 

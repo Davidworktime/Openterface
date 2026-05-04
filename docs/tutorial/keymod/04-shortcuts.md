@@ -27,7 +27,12 @@ One-tap access to common keyboard shortcuts, organized by application. Shortcut 
 3. Inside a profile, browse **category tabs** and tap any shortcut card to execute it
 4. The shortcut labels automatically adapt to the **target OS**
 
-## Creating and Managing Profiles (Android)
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-shortcut-hub.webp" alt="Shortcut Hub profile list" width="300" />
+  <p><em>Shortcut Hub — profiles and shortcut counts. Tap any profile to browse shortcuts by category.</em></p>
+</div>
+
+## Creating and Managing Profiles
 
 | Action | How |
 |---|---|
@@ -39,13 +44,7 @@ One-tap access to common keyboard shortcuts, organized by application. Shortcut 
 | Export a profile | Long-press → "Export" — saves a JSON file |
 | Import a profile | Tap **"Import"** — paste JSON or browse for a file |
 
-## Custom Profiles (iOS)
-
-Import JSON files conforming to the profile format. The JSON includes profile name, icon, theme color, categories, and shortcuts. Custom profiles are stored in the app's `Documents/ShortcutProfiles/` directory.
-
-## My Shortcuts
-
-Each profile has a **My Shortcuts** section for personal shortcuts specific to your workflow.
+Each profile also has a **My Shortcuts** section for personal shortcuts.
 
 ## Next Steps
 

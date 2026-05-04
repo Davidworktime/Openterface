@@ -11,7 +11,7 @@ Install the KeyMod app, connect to your KeyMod hardware, and send your first key
 ## What You Need
 
 - **Openterface KeyMod hardware** — powered on and within range
-- **Phone or tablet** — Android or iOS/iPadOS with the KeyMod app installed
+- **Phone or tablet** — Android with the KeyMod app installed
 - **USB cable** (for initial setup) — USB-C to connect your phone to the KeyMod device
 - **Bluetooth** (optional) — for wireless connection after initial setup
 
@@ -19,16 +19,12 @@ Install the KeyMod app, connect to your KeyMod hardware, and send your first key
 
 **Android:**
 
-1. Open your phone's browser and go to the [KeyMod GitHub Releases page](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android/releases)
+1. Open your phone's browser and go to the [KeyMod GitHub Releases page](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android/tags)
 2. Download the latest `.apk` file
 3. Tap the downloaded file to install
 4. If Android asks, allow **"Install unknown apps"** for your browser
 
 Alternatively, build from source — see [Build from Source](#build-from-source) below.
-
-**iOS / iPadOS:**
-
-KeyMod is available on the App Store for iPhone and iPad running iOS 16 or later.
 
 ## Step 2: Connect to Your KeyMod Device
 
@@ -40,7 +36,7 @@ KeyMod connects to the Openterface KeyMod hardware in two ways:
 2. Open the KeyMod app
 3. Tap the connection icon (top-right corner of the main screen)
 4. Tap **"USB Connection"**
-5. Accept the USB permission prompt (Android) or confirm the connection (iOS)
+5. Accept the USB permission prompt when prompted
 6. You should see a green **"Connected"** status indicator
 
 ### Bluetooth Connection (wireless)
@@ -58,21 +54,17 @@ KeyMod connects to the Openterface KeyMod hardware in two ways:
 
 After launching, you'll see the **Welcome & Guide** screen with mode cards:
 
-```
-Portrait mode (phone held upright):     Landscape mode (phone held sideways):
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-welcome-mode-selection.webp" alt="Welcome screen with mode tiles and Start button" width="300" />
+  <p><em>Welcome & Guide — tap any mode card to enter that mode.</em></p>
+</div>
 
-+-------------------+                   +-------------------------------+
-|  KeyMod           |                   | KeyMod      | KB  | GP  | MC |
-| Choose mode       |                   |             |     |     |    |
-|                   |                   |             | SC  | VC  | PR |
-| [Keyboard] [Game] |
-| [Macros ] [Short] |                   Tap any card to enter that mode
-| [Voice  ] [Present]                   or use the sidebar (hamburger)
-+-------------------+                   menu to navigate.
+Use the side menu (hamburger icon, top-left) to switch modes at any time:
 
-"Remember my choice" checkbox: skips this screen next time.
-"Skip" button: goes directly to last-used mode.
-```
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-navigation-drawer.webp" alt="Navigation drawer with mode list" width="300" />
+  <p><em>Navigation drawer — switch modes, access macros, voice, and settings.</em></p>
+</div>
 
 **"Remember my choice"** — check this box to skip the Welcome screen on future launches and go directly to your last-used mode.
 

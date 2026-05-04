@@ -8,7 +8,7 @@ keywords: "KeyMod tutorial, how to use KeyMod, phone keyboard guide, KeyMod app 
 
 {% include "partials/keymod-slideshow.html" %}
 
-This tutorial covers both the **Android** and **iOS/iPadOS** versions of the KeyMod app. Where features differ between platforms, we note it clearly.
+This tutorial covers the **Android** version of the KeyMod app. The iOS version is under development.
 
 ## What is KeyMod?
 
@@ -53,6 +53,6 @@ The app communicates with the KeyMod hardware using the **CH9329 protocol** over
 
 ## Getting Help
 
-- **Bug reports:** [GitHub Issues (Android)](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android/issues) / [GitHub Issues (iOS)](https://github.com/TechxArtisanStudio/Openterface_KeyMod_iOS/issues)
+- **Bug reports:** [GitHub Issues](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android/issues)
 - **Community:** [TechxArtisan Discord](https://discord.gg/techxartisan)
-- **Source code:** [Android](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android) / [iOS](https://github.com/TechxArtisanStudio/Openterface_KeyMod_iOS)
+- **Source code:** [Openterface_KeyMod_Android](https://github.com/TechxArtisanStudio/Openterface_KeyMod_Android)

@@ -4,5 +4,5 @@
 
 ## Product Updates
 
-- 2026-04-08: [KeyMod Update: USB-C vs USB-A Connectors—Prototype Photos and Community Feedback](20260408-keymod-connector-feedback.md)
+- 2026-04-08: [KeyMod Update: Prototype Connectors and Your Feedback](20260408-keymod-connector-feedback.md)
 

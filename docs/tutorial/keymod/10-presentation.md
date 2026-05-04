@@ -19,6 +19,11 @@ Control your slideshow from your phone — no clicker needed.
 | **Pointer** | Opens a pop-out touchpad for mouse control |
 | **App Switcher** | Opens the OS app switcher (Cmd+Tab / Alt+Tab) |
 
+<div align="center">
+  <img src="https://assets2.openterface.com/images/keymod/andorid/demo-presentation-google-slides.webp" alt="Presentation remote for Google Slides" width="440" />
+  <p><em>Presentation mode — timer and large controls for Google Slides. Use the top strip to switch between presentation apps.</em></p>
+</div>
+
 ## Presentation Tool Picker
 
 A carousel lets you select your presentation software (Keynote, PowerPoint, Google Slides, Word, Adobe Reader). Each tool has unique key combinations for play/stop.

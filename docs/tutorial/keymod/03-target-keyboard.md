@@ -45,7 +45,7 @@ Set the target OS to match the target computer's key conventions. This affects s
 | **Mac** | Cmd, Option key behavior |
 | **Linux** | Super, Meta key behavior |
 
-Change the target OS by tapping the **OS icon** in the header bar (Android) or using the segmented picker in the sidebar (iOS).
+Change the target OS by tapping the **OS icon** in the header bar.
 
 ### Unicode Characters
 
