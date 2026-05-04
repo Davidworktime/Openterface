@@ -40,7 +40,7 @@ The app communicates with the KeyMod hardware using the **CH9329 protocol** over
 |---|---|
 | [1. Getting Started](01-getting-started.md) | Install, connect, and pick your first mode (5 minutes) |
 | [2. Keyboard & Mouse](02-keyboard-mouse.md) | Typing, modifiers, touchpad, and text input |
-| [3. Target-Specific Keyboard](03-target-keyboard.md) | Keyboard layouts and target OS mapping |
+| [3. Target OS](03-target-keyboard.md) | Target operating system mapping |
 | [4. Shortcut Hub](04-shortcuts.md) | Profile-based keyboard shortcuts for popular apps |
 | [5. Macros](05-macros.md) | Automated key sequences with delays |
 | [6. Voice Input](06-voice-input.md) | Speech-to-keyboard with Whisper AI |
