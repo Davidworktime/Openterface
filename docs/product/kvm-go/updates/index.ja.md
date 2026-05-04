@@ -4,7 +4,8 @@
 
 ## Product Updates
 
-- 2026-03-16: [KVM-GO Production Progress Update #2](20260316-kvmgo_production-progress-update_02.md)
+- 2026-04-10: [KVM-GO 製造進捗アップデート #3](20260410-production-progress-3.ja.md)
+- 2026-03-16: [KVM-GO 製造進捗アップデート #2 – 設計確定、バッチ段取り、製造順調](20260316-kvmgo_production-progress-update_02.ja.md)
 - 2026-03-05: [Engineering Log: KVM-GO の DP/VGA 発熱を追跡し、最終的に有効だった対策まで](20260305-kvm-go-dp-vga-thermal-fix.ja.md)
 - 2025-11-14: [🚀 素晴らしいニュース：KVM-GO がついに登場！](251114-kvm-go-launch-mini-kvm-update.ja.md)
 - 2025-08-30: [KVM-Go ベータテストチームに参加 – 無料テスト、限定枠あり！](250830-kvm-go-pre-launch.ja.md)

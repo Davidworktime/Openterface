@@ -73,7 +73,7 @@ extra:
   exhibition_updates: 3
   uconsole-kvm-extension_updates: 2
   minikvm_updates: 16
-  kvm-go_updates: 10
+  kvm-go_updates: 11
   accessories_updates: 0
   keymod_updates: 1
   qt_linux_stable: 0.3.19

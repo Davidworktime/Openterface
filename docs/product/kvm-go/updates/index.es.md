@@ -4,7 +4,8 @@
 
 ## Product Updates
 
-- 2026-03-16: [KVM-GO Production Progress Update #2](20260316-kvmgo_production-progress-update_02.md)
+- 2026-04-10: [KVM-GO: avance de producción #3](20260410-production-progress-3.es.md)
+- 2026-03-16: [KVM-GO: avance de producción #2 – diseño cerrado, lotes preparados](20260316-kvmgo_production-progress-update_02.es.md)
 - 2025-11-14: [🚀 ¡Noticias emocionantes: KVM-GO ya está disponible!](251114-kvm-go-launch-mini-kvm-update.es.md)
 - 2025-08-30: [Únete al equipo de pruebas beta de KVM-Go – ¡Prueba gratuita, plazas limitadas!](250830-kvm-go-pre-launch.es.md)
 
