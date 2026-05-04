@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Configure keyboard layouts and target OS mapping so KeyMod sends the correct keys to Windows, macOS, or Linux computers.">
+        <meta name="description" content="Set the target operating system so KeyMod sends the correct key mappings to Windows, macOS, or Linux computers.">
       
       
         <meta name="author" content="Openterface">
@@ -46,7 +46,7 @@
     
     
       
-        <title>KeyMod Tutorial - Target-Specific Keyboard - Openterface | インターフェースを橋渡し、無限の可能性を開く</title>
+        <title>KeyMod Tutorial - Target OS - Openterface | インターフェースを橋渡し、無限の可能性を開く</title>
       
     
     
@@ -385,16 +385,16 @@
 
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="KeyMod Tutorial - Target-Specific Keyboard - Openterface | インターフェースを橋渡し、無限の可能性を開く">
-<meta property="og:description" content="Configure keyboard layouts and target OS mapping so KeyMod sends the correct keys to Windows, macOS, or Linux computers.">
+<meta property="og:title" content="KeyMod Tutorial - Target OS - Openterface | インターフェースを橋渡し、無限の可能性を開く">
+<meta property="og:description" content="Set the target operating system so KeyMod sends the correct key mappings to Windows, macOS, or Linux computers.">
 <meta property="og:image" content="https://openterface.com/assets/images/social/ja/tutorial/keymod/03-target-keyboard.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://openterface.com/ja/tutorial/keymod/03-target-keyboard/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="KeyMod Tutorial - Target-Specific Keyboard - Openterface | インターフェースを橋渡し、無限の可能性を開く">
-<meta property="twitter:description" content="Configure keyboard layouts and target OS mapping so KeyMod sends the correct keys to Windows, macOS, or Linux computers.">
+<meta property="twitter:title" content="KeyMod Tutorial - Target OS - Openterface | インターフェースを橋渡し、無限の可能性を開く">
+<meta property="twitter:description" content="Set the target operating system so KeyMod sends the correct key mappings to Windows, macOS, or Linux computers.">
 <meta property="twitter:image" content="https://openterface.com/assets/images/social/ja/tutorial/keymod/03-target-keyboard.png">
 
   
@@ -415,7 +415,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-target-specific-keyboard" class="md-skip">
+        <a href="#3-target-os" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -459,7 +459,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              KeyMod Tutorial - Target-Specific Keyboard
+              KeyMod Tutorial - Target OS
             
           </span>
         </div>
@@ -3741,10 +3741,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#keyboard-layouts" class="md-nav__link">
+  <a href="#how-to-set" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Keyboard Layouts
+        How to Set
       
     </span>
   </a>
@@ -3752,10 +3752,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#target-os-mapping" class="md-nav__link">
+  <a href="#what-it-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Target OS Mapping
+        What It Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unicode Characters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-modes-not-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Modes (Not Layouts)
       
     </span>
   </a>
@@ -4714,86 +4736,19 @@
   
 
 
-<h1 id="3-target-specific-keyboard">3. Target-Specific Keyboard</h1>
-<p>KeyMod sends keystrokes that adapt to the target computer's operating system and keyboard layout. Configuring these settings correctly ensures the right keys arrive on the target.</p>
-<h2 id="keyboard-layouts">Keyboard Layouts</h2>
-<p>KeyMod supports different physical keyboard layouts to correctly map scancodes to the target:</p>
-<table>
-<thead>
-<tr>
-<th>Layout</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>QWERTY US</strong></td>
-<td>Default</td>
-</tr>
-<tr>
-<td><strong>QWERTY UK</strong></td>
-<td>British layout</td>
-</tr>
-<tr>
-<td><strong>QWERTZ German</strong></td>
-<td>German layout</td>
-</tr>
-<tr>
-<td><strong>AZERTY French</strong></td>
-<td>French layout</td>
-</tr>
-<tr>
-<td><strong>AZERTY Belgian</strong></td>
-<td>Belgian layout</td>
-</tr>
-<tr>
-<td><strong>QWERTY Danish</strong></td>
-<td>Danish layout</td>
-</tr>
-<tr>
-<td><strong>QWERTY Spanish</strong></td>
-<td>Spanish layout</td>
-</tr>
-<tr>
-<td><strong>QWERTY Swedish</strong></td>
-<td>Swedish layout</td>
-</tr>
-<tr>
-<td><strong>Japanese</strong></td>
-<td>JIS layout</td>
-</tr>
-</tbody>
-</table>
-<p>Set your layout via <strong>Settings &gt; Keyboard Layout</strong> to ensure keys are sent correctly to the target.</p>
-<h3 id="wrong-keyboard-layout-symptoms">Wrong Keyboard Layout Symptoms</h3>
-<table>
-<thead>
-<tr>
-<th>Symptom</th>
-<th>Likely Cause</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@</code> and <code>"</code> swapped</td>
-<td>UK vs US layout mismatch</td>
-</tr>
-<tr>
-<td><code>Y</code> and <code>Z</code> swapped</td>
-<td>QWERTY vs QWERTZ mismatch</td>
-</tr>
-<tr>
-<td><code>A</code> and <code>Q</code> swapped</td>
-<td>QWERTY vs AZERTY mismatch</td>
-</tr>
-<tr>
-<td><code>¥</code> key not working</td>
-<td>Japanese layout not selected</td>
-</tr>
-</tbody>
-</table>
-<h2 id="target-os-mapping">Target OS Mapping</h2>
-<p>Set the target OS to match the target computer's key conventions. This affects shortcut labels, Unicode input methods, and modifier key mapping.</p>
+<h1 id="3-target-os">3. Target OS</h1>
+<p>KeyMod sends keystrokes that adapt to the target computer's operating system. Configuring this correctly ensures the right keys arrive on the target.</p>
+<h2 id="how-to-set">How to Set</h2>
+<p>Tap the <strong>OS icon</strong> in the header bar to open the picker:</p>
+<div align="center">
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/demo-target-os-picker.png" data-desc-position="bottom"><img src="images/demo-target-os-picker.png" alt="Target OS picker dialog" width="300"></a>
+  <p><em>Target OS picker — choose macOS, Windows, or Linux.</em></p>
+</div>
+
+<blockquote>
+<p><strong>Note:</strong> There is no screenshot for this yet. The OS picker is a dialog with three icon buttons (macOS, Windows, Linux) that appears when you tap the OS icon in the header bar.</p>
+</blockquote>
+<h2 id="what-it-changes">What It Changes</h2>
 <table>
 <thead>
 <tr>
@@ -4804,20 +4759,23 @@
 <tbody>
 <tr>
 <td><strong>Windows</strong></td>
-<td>Alt, Ctrl, Win key behavior</td>
+<td>Win key mapped to Windows key; standard PC modifier behavior</td>
 </tr>
 <tr>
-<td><strong>Mac</strong></td>
-<td>Cmd, Option key behavior</td>
+<td><strong>macOS</strong></td>
+<td>Win key mapped to Cmd; Alt mapped to Option; correct shortcut labels</td>
 </tr>
 <tr>
 <td><strong>Linux</strong></td>
-<td>Super, Meta key behavior</td>
+<td>Super/Meta key behavior</td>
 </tr>
 </tbody>
 </table>
-<p>Change the target OS by tapping the <strong>OS icon</strong> in the header bar.</p>
-<h3 id="unicode-characters">Unicode Characters</h3>
+<p>This affects:
+- <strong>Shortcut labels</strong> shown in Shortcut Hub
+- <strong>Modifier key mapping</strong> (Win key behavior)
+- <strong>Unicode input method</strong> used for non-ASCII characters</p>
+<h2 id="unicode-characters">Unicode Characters</h2>
 <p>Non-ASCII characters (Chinese, Japanese, emoji) require OS-specific input methods:</p>
 <table>
 <thead>
@@ -4841,7 +4799,32 @@
 </tr>
 </tbody>
 </table>
-<p>If Unicode characters appear incorrectly, verify the <strong>Target OS</strong> is set correctly.</p>
+<p>If Unicode characters appear incorrectly on the target, verify the Target OS is set correctly.</p>
+<h2 id="keyboard-modes-not-layouts">Keyboard Modes (Not Layouts)</h2>
+<p>KeyMod provides three keyboard modes for typing:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>How to switch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ABC</strong> (letters)</td>
+<td>Tap the <strong>ABC</strong> key</td>
+</tr>
+<tr>
+<td><strong>123</strong> (numbers)</td>
+<td>Tap the <strong>123</strong> key</td>
+</tr>
+<tr>
+<td><strong>!?#</strong> (symbols)</td>
+<td>Tap the <strong>!?#</strong> key</td>
+</tr>
+</tbody>
+</table>
+<p>These are input method toggles within the app, not physical keyboard layouts. KeyMod currently sends standard USB HID scancodes (US QWERTY base). If you use a non-US physical keyboard on the target, you may see slight character mismatches for symbols on the same key positions.</p>
 <h2 id="next-steps">Next Steps</h2>
 <ul>
 <li><strong><a href="../02-keyboard-mouse/">← Keyboard &amp; Mouse</a></strong> — Typing, modifiers, touchpad, and text input</li>
@@ -4869,7 +4852,7 @@
     <span class="md-icon" title="最終更新日">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="May 4, 2026 08:22:25 UTC"><span class="timeago" datetime="2026-05-04T08:22:25+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 4, 2026 08:22:25 UTC">2026-05-04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="May 4, 2026 09:33:56 UTC"><span class="timeago" datetime="2026-05-04T09:33:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 4, 2026 09:33:56 UTC">2026-05-04</span>
   </span>
 
     
