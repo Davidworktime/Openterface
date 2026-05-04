@@ -1,53 +1,38 @@
 ---
-title: "KeyMod Tutorial - Target-Specific Keyboard"
-description: "Configure keyboard layouts and target OS mapping so KeyMod sends the correct keys to Windows, macOS, or Linux computers."
-keywords: "KeyMod keyboard layout, target OS, QWERTY, AZERTY, keyboard mapping, modifier keys"
+title: "KeyMod Tutorial - Target OS"
+description: "Set the target operating system so KeyMod sends the correct key mappings to Windows, macOS, or Linux computers."
+keywords: "KeyMod target OS, key mapping, modifier keys, Unicode input"
 ---
 
-# 3. Target-Specific Keyboard
+# 3. Target OS
 
-KeyMod sends keystrokes that adapt to the target computer's operating system and keyboard layout. Configuring these settings correctly ensures the right keys arrive on the target.
+KeyMod sends keystrokes that adapt to the target computer's operating system. Configuring this correctly ensures the right keys arrive on the target.
 
-## Keyboard Layouts
+## How to Set
 
-KeyMod supports different physical keyboard layouts to correctly map scancodes to the target:
+Tap the **OS icon** in the header bar to open the picker:
 
-| Layout | Notes |
-|--------|-------|
-| **QWERTY US** | Default |
-| **QWERTY UK** | British layout |
-| **QWERTZ German** | German layout |
-| **AZERTY French** | French layout |
-| **AZERTY Belgian** | Belgian layout |
-| **QWERTY Danish** | Danish layout |
-| **QWERTY Spanish** | Spanish layout |
-| **QWERTY Swedish** | Swedish layout |
-| **Japanese** | JIS layout |
+<div align="center">
+  <img src="images/demo-target-os-picker.png" alt="Target OS picker dialog" width="300" />
+  <p><em>Target OS picker — choose macOS, Windows, or Linux.</em></p>
+</div>
 
-Set your layout via **Settings > Keyboard Layout** to ensure keys are sent correctly to the target.
+> **Note:** There is no screenshot for this yet. The OS picker is a dialog with three icon buttons (macOS, Windows, Linux) that appears when you tap the OS icon in the header bar.
 
-### Wrong Keyboard Layout Symptoms
-
-| Symptom | Likely Cause |
-|---------|-------------|
-| `@` and `"` swapped | UK vs US layout mismatch |
-| `Y` and `Z` swapped | QWERTY vs QWERTZ mismatch |
-| `A` and `Q` swapped | QWERTY vs AZERTY mismatch |
-| `¥` key not working | Japanese layout not selected |
-
-## Target OS Mapping
-
-Set the target OS to match the target computer's key conventions. This affects shortcut labels, Unicode input methods, and modifier key mapping.
+## What It Changes
 
 | Target | Key Mapping |
 |--------|-------------|
-| **Windows** | Alt, Ctrl, Win key behavior |
-| **Mac** | Cmd, Option key behavior |
-| **Linux** | Super, Meta key behavior |
+| **Windows** | Win key mapped to Windows key; standard PC modifier behavior |
+| **macOS** | Win key mapped to Cmd; Alt mapped to Option; correct shortcut labels |
+| **Linux** | Super/Meta key behavior |
 
-Change the target OS by tapping the **OS icon** in the header bar.
+This affects:
+- **Shortcut labels** shown in Shortcut Hub
+- **Modifier key mapping** (Win key behavior)
+- **Unicode input method** used for non-ASCII characters
 
-### Unicode Characters
+## Unicode Characters
 
 Non-ASCII characters (Chinese, Japanese, emoji) require OS-specific input methods:
 
@@ -57,7 +42,19 @@ Non-ASCII characters (Chinese, Japanese, emoji) require OS-specific input method
 | **Linux** | Ctrl+Shift+U followed by hex code |
 | **macOS** | Option+hex input |
 
-If Unicode characters appear incorrectly, verify the **Target OS** is set correctly.
+If Unicode characters appear incorrectly on the target, verify the Target OS is set correctly.
+
+## Keyboard Modes (Not Layouts)
+
+KeyMod provides three keyboard modes for typing:
+
+| Mode | How to switch |
+|---|---|
+| **ABC** (letters) | Tap the **ABC** key |
+| **123** (numbers) | Tap the **123** key |
+| **!?#** (symbols) | Tap the **!?#** key |
+
+These are input method toggles within the app, not physical keyboard layouts. KeyMod currently sends standard USB HID scancodes (US QWERTY base). If you use a non-US physical keyboard on the target, you may see slight character mismatches for symbols on the same key positions.
 
 ## Next Steps
 
